@@ -1,0 +1,36 @@
+.alertBox {
+  background-color: #12131fe6;
+  flex-direction: row;
+  border-radius: 50px;
+  align-items: center;
+  position: fixed;
+  bottom: 100px;
+  left: 13%;
+  z-index: 30;
+}
+.alertBox p {
+  margin: 0 25px;
+  font-family: "Exo";
+  font-size: 0.87rem;
+  letter-spacing: 1px;
+}
+.alertBox p:hover {
+  cursor: pointer;
+  color: #5864ff;
+}
+.alertBox button {
+  padding: 13px 26px;
+  max-width: fit-content;
+}
+@media (max-width: 800px) {
+  .alertBox {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0;
+    padding: 20px;
+    left: 0;
+    bottom: 50px;
+    height: 110px;
+    justify-content: space-around;
+  }
+}

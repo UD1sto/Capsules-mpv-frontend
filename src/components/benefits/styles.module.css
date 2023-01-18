@@ -1,0 +1,64 @@
+.benefitsBlock {
+  width: 100%;
+  background: rgba(88, 100, 255, 0.15);
+  min-height: 340px;
+  justify-content: center;
+  position: relative;
+  z-index: 26;
+}
+.benefitsBox {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.benefitsBox h2 {
+  margin-right: 40px;
+}
+
+.benefitsContainer {
+  flex-direction: row;
+  width: 100%;
+  max-width: 770px;
+  justify-content: space-between;
+}
+.benValue {
+  font-family: "Exo";
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.benLabel {
+  font-family: "Exo";
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1366px) {
+  .benValue {
+    font-size: 1.75rem;
+  }
+  .benefitsBlock {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .benefitsBox {
+    flex-wrap: wrap;
+    padding: 60px 0;
+  }
+  .benefitsContainer{
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .benefitsContainer {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+  .benefitsContainer div {
+    width: 50%;
+    margin-top: 40px;
+  }
+}
