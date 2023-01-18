@@ -1,26 +1,18 @@
-import {  Stack, Typography, Container } from "@mui/material";
+import { Stack, Typography, Container } from "@mui/material";
 import styles from "./styles.module.css";
 
-const BENEFITS = [
-  {
-    label: "Price",
-    value: "$1.11+",
-  },
-  {
-    label: "Total pairs",
-    value: "18.32k",
-  },
-  {
-    label: "Total liquidity",
-    value: "$563.25m",
-  },
-  {
-    label: "Total Volume",
-    value: "$236.92b",
-  },
-];
+export interface Benefit {
+  value?: string;
+  label?: string;
+}
 
-export function Benefits() {
+export interface BenefitsProps {
+  benefits: Array<Benefit>;
+}
+
+export function Benefits(props: BenefitsProps) {
+  const { benefits } = props || {};
+
   return (
     <Stack className={styles.benefitsBlock}>
       <Container maxWidth="xl">
@@ -30,13 +22,8 @@ export function Benefits() {
             <br /> capsules
           </Typography>
           <Stack className={styles.benefitsContainer}>
-            {BENEFITS.map((benefit) => (
-              <Stack>
-                <Typography className={styles.benValue}>
-                  {benefit.value}
-                </Typography>
-                <Typography variant="subtitle1">{benefit.label}</Typography>
-              </Stack>
+            {benefits?.map((benefit) => (
+              <BenefitItem benefit={benefit} key={benefit.label} />
             ))}
           </Stack>
         </Stack>
@@ -44,3 +31,10 @@ export function Benefits() {
     </Stack>
   );
 }
+
+const BenefitItem = ({ benefit }: { benefit: Benefit }) => (
+  <Stack>
+    <Typography className={styles.benValue}>{benefit.value}</Typography>
+    <Typography variant="subtitle1">{benefit.label}</Typography>
+  </Stack>
+);

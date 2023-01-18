@@ -10,44 +10,8 @@ import {
 import { BenefitAction, Benefits, ComingSoon, Alert } from "@/components";
 import { BasicLayout } from "@/layouts/BasicLayout";
 import { useState } from "react";
+import { ACTIONS, BENEFITS } from "@/content";
 
-const ACTIONS = [
-  {
-    image: "/images/Supply.png",
-    label: "Supply to earn",
-    description:
-      "Stakers are rewarded for providing liquidity to the protocol with 70% of the SDL fees",
-    link: "",
-    maxWidth: 590,
-    maxContentWidth: 490,
-  },
-  {
-    image: "/images/Pools.png",
-    label: "Borrow with SDL as collateral",
-    description:
-      "You can now borrow using SDL as collateral, a large collection of tokens are available for loaning",
-    link: "",
-    maxWidth: 770,
-    maxContentWidth: 570,
-  },
-  {
-    image: "/images/Panel.png",
-    label: "Earn IMBA",
-    description:
-      "Imba is our native token, it is used as both a governance and a utility token and has a 2,000,000 max supply limit.",
-    link: "",
-    maxWidth: 770,
-    maxContentWidth: 490,
-  },
-  {
-    image: "/images/Stack.png",
-    label: "Lock imba to multiply your rewards",
-    description: "By locking your IMBA you will receive rewards weekly.",
-    link: "",
-    maxWidth: 590,
-    maxContentWidth: 670,
-  },
-];
 
 export default function Home() {
 
@@ -59,6 +23,7 @@ export default function Home() {
         <Container maxWidth="xl">
           <Stack className={styles.headContainer}>
             <Stack className={styles.headerBox}>
+              
               <Stack className={styles.head}>
                 <Typography variant="h1">
                   Unlock the full potential of your liquidity positions
@@ -84,7 +49,9 @@ export default function Home() {
             </Stack>
           </Stack>
         </Container>
-        <Benefits />
+
+        <Benefits benefits={BENEFITS}/>
+
         <Alert
           title="Increase your LP positions by 80%."
           opened={opened}
@@ -92,9 +59,10 @@ export default function Home() {
           actionTitle="Learn how"
           handleAction={() => console.log(2)}
         />
+
         <Container maxWidth="xl">
           {ACTIONS.map((action, index) => (
-            <BenefitAction action={action} index={index} />
+            <BenefitAction action={action} index={index} key={action.label}/>
           ))}
 
           <ComingSoon />
