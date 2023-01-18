@@ -5,6 +5,7 @@ const themeOptions: ThemeOptions = {
     mode: "dark",
     primary: {
       main: "#5864FF",
+      dark: "#4048B7",
     },
     background: {
       default: "rgba(60, 60, 60, 0.2)",
@@ -89,11 +90,10 @@ const themeOptions: ThemeOptions = {
     MuiContainer: {
       styleOverrides: {
         root: {
-        
           "@media (max-width:1410px)": {
             padding: "0 10%",
           },
-          
+
           "@media (max-width:900px)": {
             padding: "0 24px",
           },

@@ -8,7 +8,6 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
- 
 }
 
 ul[class],
@@ -38,7 +37,8 @@ a {
   color: inherit;
 }
 
-body{
-  background-color:#17181f;
+body {
   position: relative;
+  background-color: #141414;
 }
+

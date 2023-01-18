@@ -4,3 +4,8 @@ export * from "./benefit-action/BenefitAction";
 export * from "./coming-soon/ComingSoon";
 export * from "./footer/Footer";
 export * from "./alert/Alert";
+export * from "./logo/Logo";
+export * from "./main-menu/MainMenu";
+export * from "./tabs/Tabs";
+export * from "./card/Card";
+export * from "./pool-item/PoolItem";

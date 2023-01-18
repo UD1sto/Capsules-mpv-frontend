@@ -1,14 +1,23 @@
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Container, Stack } from "@mui/material";
+import { Logo } from "../logo/Logo";
 import styles from "./styles.module.css";
 
 export function HomeMenu() {
   return (
-    <Stack className={styles.container}>
-      <Stack className={styles.logoBox}>
-        <img src="/icons/logo.svg" alt="logo" className={styles.logoImg} />
-        <Typography>Capsula</Typography>
-      </Stack>
-      <Button variant="contained">Enter app</Button>
+    <Stack
+      sx={{
+        position: "absolute",
+        width: "100%",
+        top: 0,
+        zIndex: 100,
+      }}
+    >
+      <Container maxWidth="xl">
+        <Stack className={styles.container}>
+          <Logo />
+          <Button variant="contained">Enter app</Button>
+        </Stack>
+      </Container>
     </Stack>
   );
 }

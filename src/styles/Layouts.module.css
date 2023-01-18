@@ -1,0 +1,41 @@
+.mainFooter {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.baseLayout {
+  overflow: hidden;
+  position: relative;
+  padding-top: 90px;
+}
+.layoutLight {
+  position: absolute;
+  width: 550px;
+  height: 50vh;
+  left: calc(50% - 250px);
+  top: 20vh;
+  opacity: 0.5;
+  background: rgba(88, 100, 255, 0.5);
+  filter: blur(550px);
+  border-radius: 200px;
+}
+.il1 {
+  position: absolute;
+  left: -160px;
+  width: 600px;
+  height: 600px;
+  top: 30vh;
+}
+.il2 {
+  position: absolute;
+  right: -125px;
+  width: 380px;
+  height: 380px;
+  top: 20vh;
+}
+@media (max-width: 1366px) {
+  .il1,
+  .il2 {
+    display: none;
+  }
+}
