@@ -1,14 +1,9 @@
 import styles from "@/styles/Home.module.css";
-import {
-  Box,
-  Button,
-  Container,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { BenefitAction, Benefits, ComingSoon, Alert } from "@/components";
 import { useState } from "react";
 import { ACTIONS, BENEFITS } from "@/content";
+import Link from "next/link";
 
 export default function Home() {
   const [opened, setOpened] = useState(true);
@@ -26,8 +21,12 @@ export default function Home() {
                 Earn more from your stablecoin LP positions
               </Typography>
               <Stack direction="row">
-                <Button variant="contained">Enter app</Button>
-                <Button variant="outlined">Documentation</Button>
+                <Link href="/dashboard">
+                  <Button variant="contained">Enter app</Button>
+                </Link>
+                <Link href="#">
+                  <Button variant="outlined">Documentation</Button>
+                </Link>
               </Stack>
             </Stack>
 
