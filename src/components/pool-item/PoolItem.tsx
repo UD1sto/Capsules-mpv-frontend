@@ -1,56 +1,69 @@
 import { Button, Stack, Typography } from "@mui/material";
 import { Card } from "../card/Card";
+import styles from "./styles.module.css";
 
-export function PoolItem() {
+export interface PoolItem {
+  title: string;
+  date: string;
+  icon1: string;
+  icon2: string;
+  tvl: string;
+  volume: string;
+  balance: string;
+}
+
+export interface PoolItemProps {
+  poolItem: PoolItem;
+}
+
+const style = {
+  mb: 0.5,
+  alignItems: "center",
+  justifyContent: "space-between",
+  flexDirection: "row",
+  flexWrap: { xs: "wrap", md: "no-wrap" },
+  zIndex: 200,
+  p:{ sm:"12px 30px!important",xs:"25px 20px!important"},
+  ":hover": {
+    backgroundColor: "rgba(60, 60, 60, 0.4)",
+    transition: "0.3s",
+  },
+};
+
+export function PoolItem(props: PoolItemProps) {
+  const { title, date, icon1, icon2, tvl, volume, balance } =
+    props?.poolItem || {};
+
   return (
-    <Card
-      sx={{
-        mb: 0.5,
-        alignItems: "center",
-        justifyContent: "space-between",
-        flexDirection: "row",
-        ":hover": {
-          backgroundColor: "rgba(60, 60, 60, 0.4)",
-          transition: "0.3s",
-          cursor: "pointer",
-        },
-      }}
-    >
-      <Stack>
-        <Typography> Ruby1010/1215</Typography>
-        <Typography>Oct 10 - Dec 15</Typography>
+    <Card sx={style}>
+      <Stack className={styles.titleBox}>
+        <Typography>{title}</Typography>
+        <Typography variant="subtitle1">{date}</Typography>
       </Stack>
-      <Stack direction="row">
-        <img src="/images/bnb.png" alt="" style={{ width: "35px" }} />
-        <img src="/images/bnc.png" alt="" style={{ width: "30px" }} />
+      <Stack direction="row" className={styles.iconBox} spacing={1}>
+        <img src={icon1} alt="icon" />
+        <img src={icon2} alt="icon" />
       </Stack>
-      <Stack direction="row">
+      <Stack spacing={6} direction="row" className={styles.descBox}>
         <Stack>
-          <Typography>TVL</Typography>
-          <Typography>$18.5m</Typography>
+          <Typography variant="subtitle1">TVL</Typography>
+          <Typography>{tvl}</Typography>
         </Stack>
         <Stack>
-          <Typography>24h Vol.</Typography>
-          <Typography>$0.0</Typography>
+          <Typography variant="subtitle1">24h Vol.</Typography>
+          <Typography>{volume}</Typography>
         </Stack>
         <Stack>
-          <Typography>Balance</Typography>
-          <Typography>100</Typography>
+          <Typography variant="subtitle1">Balance</Typography>
+          <Typography>{balance}</Typography>
         </Stack>
       </Stack>
-      <Stack>
-        <Button
-          variant="contained"
-          sx={{ mb: 1, fontSize: "14px", width: "140px", height: "40px" }}
-        >
-          Borrow
-        </Button>
-        <Button
-          variant="outlined"
-          sx={{ fontSize: "14px", width: "140px", height: "40px" }}
-        >
-          Replay
-        </Button>
+      <Stack
+        className={styles.btnBox}
+        spacing={1}
+      >
+        <Button variant="contained">Borrow</Button>
+        <Button variant="outlined">Replay</Button>
       </Stack>
     </Card>
   );

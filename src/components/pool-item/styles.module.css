@@ -1,0 +1,59 @@
+.titleBox h6,
+.descBox div h6 {
+  font-size: 0.87rem;
+}
+.titleBox p {
+  font-family: "Jura";
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+.iconBox {
+  align-items: center;
+}
+.iconBox img {
+  width: 30px;
+  height: 31px;
+}
+.iconBox img:nth-of-type(2) {
+  width: 25px;
+  height: 27px;
+}
+
+.btnBox button {
+  font-size: 0.87rem;
+  width: 140px;
+  height: 40px;
+}
+
+@media (max-width: 770px) {
+  .btnBox {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: start;
+  }
+  .iconBox {
+    margin: 0 10px;
+  }
+  .btnBox button {
+    margin: 0 !important;
+  }
+  .btnBox button:nth-of-type(1) {
+    margin-right: 8px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .descBox {
+    margin: 40px 0 20px;
+  }
+  .btnBox button {
+    width: 45%;
+    max-width: 140px;
+  }
+  .btnBox {
+    justify-content: center;
+  }
+}
