@@ -1,12 +1,11 @@
 import { TabsPanel } from "@/components";
-import { PoolItem } from "@/components/pool-item/PoolItem";
 import { Pagination, Stack, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 
 export default function Dashboard() {
   return (
     <Container maxWidth="xl">
-      <Stack alignItems="center" mb={10}>
+      <Stack alignItems="center">
         <Typography variant="h2" m="50px 0 20px">
           Dashboard
         </Typography>
@@ -19,7 +18,7 @@ export default function Dashboard() {
         <Stack sx={{ width: "100%", maxWidth: 1200, mt: 9 }}>
           <TabsPanel />
         </Stack>
-        <Pagination count={10} />
+        <Pagination count={10}  />
       </Stack>
     </Container>
   );

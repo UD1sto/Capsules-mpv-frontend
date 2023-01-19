@@ -13,6 +13,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         style={{
           position: "relative",
           minHeight: "100vh",
+          paddingBottom:"170px"
         }}
         className={styles.baseLayout}
       >
