@@ -1,6 +1,7 @@
-import { TabsPanel } from "@/components";
-import { Pagination, Stack, Typography } from "@mui/material";
+import { BorrowLP, BorrowTokens, TabsPanel } from "@/components";
+import { Stack, Typography } from "@mui/material";
 import { Container } from "@mui/system";
+
 
 export default function Dashboard() {
   return (
@@ -16,9 +17,19 @@ export default function Dashboard() {
           are supported
         </Typography>
         <Stack sx={{ width: "100%", maxWidth: 1200, mt: 9 }}>
-          <TabsPanel />
+          <TabsPanel
+            tabs={[
+              {
+                label: "Borrow using LP",
+                component: <BorrowLP />,
+              },
+              {
+                label: "Borrow using Crypto tockens",
+                component: <BorrowTokens />,
+              },
+            ]}
+          />
         </Stack>
-        <Pagination count={10}  />
       </Stack>
     </Container>
   );

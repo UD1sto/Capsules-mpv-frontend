@@ -2,15 +2,20 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import { PoolItem } from "../pool-item/PoolItem";
-import { filters, POOLS } from "@/content";
 import { useMediaQuery } from "@material-ui/core";
-import { SwitchFilter } from "@/components";
 
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
+}
+
+interface Tab {
+  label: string;
+  component: React.ReactNode;
+}
+interface TabsProps {
+  tabs: Array<Tab>;
 }
 
 function TabPanel(props: TabPanelProps) {
@@ -29,14 +34,7 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-function a11yProps(index: number) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
-
-export function TabsPanel() {
+export function TabsPanel({ tabs }: TabsProps) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -55,19 +53,23 @@ export function TabsPanel() {
           textColor="secondary"
           centered={!xs}
         >
-          <Tab label="Borrow using LP" {...a11yProps(0)} />
-          <Tab label={`Borrow using Crypto tockens`} {...a11yProps(1)} />
+          {tabs.map((tab, index) => (
+            <Tab label={tab.label} {...a11yProps(index)} />
+          ))}
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        <SwitchFilter filters={filters} />
-        {POOLS.map((pool) => (
-          <PoolItem poolItem={pool} />
-        ))}
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
+      {tabs.map((tab, index) => (
+        <TabPanel value={value} index={index}>
+          {tab.component}
+        </TabPanel>
+      ))}
     </Box>
   );
+}
+
+function a11yProps(index: number) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
 }

@@ -109,3 +109,71 @@ export const filters = [
   { query: "dolor", label: "Dolor sit" },
   { query: "cons", label: "Consectetur" },
 ];
+
+export const SUPPLY_HEADERS = [
+  { label: "Assets", value: "assets" },
+  { label: "Wallet balance", value: "walletBalance" },
+  { label: "APY", value: "apy" },
+  { label: "Can be collateral", value: "collaratel" },
+];
+
+export const BORROW_HEADERS = [
+  { label: "Assets", value: "assets" },
+  { label: "Available", value: "available" },
+  { label: "APY, variable", value: "apyVar" },
+  { label: "APY, stable", value: "apyStable" },
+];
+
+export const TABLE_DATA = [
+  {
+    assets: "Ruby1010/1215",
+    walletBalance: 0,
+    apy: "1.16%",
+    collaratel: "-",
+  },
+  {
+    assets: "Ruby1010/1215",
+    walletBalance: 0,
+    apy: "1.16%",
+    collaratel: "-",
+  },
+  {
+    assets: "Ruby1010/1215",
+    walletBalance: 0,
+    apy: "1.16%",
+    collaratel: "-",
+  },
+  {
+    assets: "Ruby1010/1215",
+    walletBalance: 0,
+    apy: "1.16%",
+    collaratel: "-",
+  },
+];
+
+export const TABLE_DATA2 = [
+  {
+    assets: "Ruby1010/1215",
+    available: 0,
+    apyVar: "1.16%",
+    apyStable: "-",
+  },
+  {
+    assets: "Ruby1010/1215",
+    available: 0,
+    apyVar: "1.16%",
+    apyStable: "-",
+  },
+  {
+    assets: "Ruby1010/1215",
+    available: 0,
+    apyVar: "1.16%",
+    apyStable: "-",
+  },
+  {
+    assets: "Ruby1010/1215",
+    available: 0,
+    apyVar: "1.16%",
+    apyStable: "-",
+  },
+];

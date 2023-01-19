@@ -10,3 +10,5 @@ export * from "./tabs/Tabs";
 export * from "./card/Card";
 export * from "./pool-item/PoolItem";
 export * from "./switch-filter/SwitchFilter";
+export * from "./table/table";
+export * from "./dashboard/index";

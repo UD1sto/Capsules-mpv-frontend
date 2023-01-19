@@ -45,6 +45,17 @@ const themeOptions: ThemeOptions = {
         lineHeight: "50px",
       },
     },
+    h3: {
+      fontSize: "1.5rem",
+      fontFamily: "Jura",
+      fontWeight: 700,
+      textTransform: "uppercase",
+      color: "#FFFFFF",
+      "@media (max-width:800px)": {
+        fontSize: "1.25rem",
+        lineHeight: "32px",
+      },
+    },
     allVariants: {
       color: "#FFFFFF",
     },

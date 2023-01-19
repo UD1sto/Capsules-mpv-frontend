@@ -6,6 +6,7 @@
   font-family: "Jura";
   font-size: 1.25rem;
   letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 .iconBox {
   align-items: center;
@@ -23,6 +24,9 @@
   font-size: 0.87rem;
   width: 140px;
   height: 40px;
+}
+.descBox h6{
+    margin-bottom: 4px;
 }
 
 @media (max-width: 770px) {
