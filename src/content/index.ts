@@ -37,20 +37,75 @@ export const ACTIONS = [
 ];
 
 export const BENEFITS = [
-    {
-      label: "Price",
-      value: "$1.11+",
-    },
-    {
-      label: "Total pairs",
-      value: "18.32k",
-    },
-    {
-      label: "Total liquidity",
-      value: "$563.25m",
-    },
-    {
-      label: "Total Volume",
-      value: "$236.92b",
-    },
-  ];
+  {
+    label: "Price",
+    value: "$1.11+",
+  },
+  {
+    label: "Total pairs",
+    value: "18.32k",
+  },
+  {
+    label: "Total liquidity",
+    value: "$563.25m",
+  },
+  {
+    label: "Total Volume",
+    value: "$236.92b",
+  },
+];
+
+export const POOLS = [
+  {
+    title: "Ruby1010/1215",
+    date: "Oct 10 - Dec 15",
+    icon1: "/images/bnb.png",
+    icon2: "/images/bnc.png",
+    tvl: "$18.5m",
+    volume: "$0.0",
+    balance: "100",
+  },
+  {
+    title: "Ruby1010/1215",
+    date: "Oct 10 - Dec 15",
+    icon1: "/images/bnb.png",
+    icon2: "/images/bnc.png",
+    tvl: "$18.5m",
+    volume: "$0.0",
+    balance: "100",
+  },
+  {
+    title: "Ruby1010/1215",
+    date: "Oct 10 - Dec 15",
+    icon1: "/images/bnb.png",
+    icon2: "/images/bnc.png",
+    tvl: "$18.5m",
+    volume: "$0.0",
+    balance: "100",
+  },
+  {
+    title: "Ruby1010/1215",
+    date: "Oct 10 - Dec 15",
+    icon1: "/images/bnb.png",
+    icon2: "/images/bnc.png",
+    tvl: "$18.5m",
+    volume: "$0.0",
+    balance: "100",
+  },
+  {
+    title: "Ruby1010/1215",
+    date: "Oct 10 - Dec 15",
+    icon1: "/images/bnb.png",
+    icon2: "/images/bnc.png",
+    tvl: "$18.5m",
+    volume: "$0.0",
+    balance: "100",
+  },
+];
+
+export const filters = [
+  { query: "all", label: "All" },
+  { query: "lorem", label: "Lorem ipsum" },
+  { query: "dolor", label: "Dolor sit" },
+  { query: "cons", label: "Consectetur" },
+];

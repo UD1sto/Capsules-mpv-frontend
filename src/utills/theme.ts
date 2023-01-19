@@ -10,6 +10,10 @@ const themeOptions: ThemeOptions = {
     background: {
       default: "rgba(60, 60, 60, 0.2)",
     },
+    secondary: {
+      main: "#FFFFFF",
+      dark: "#C9C9D3",
+    },
   },
   typography: {
     htmlFontSize: 16,
@@ -85,6 +89,13 @@ const themeOptions: ThemeOptions = {
             },
           },
         },
+        {
+          props: { variant: "text" },
+          style: {
+            color: "#FFFFFF",
+            backgroundColor: "transparent",
+          },
+        },
       ],
     },
     MuiContainer: {
@@ -96,6 +107,31 @@ const themeOptions: ThemeOptions = {
 
           "@media (max-width:900px)": {
             padding: "0 24px",
+          },
+        },
+      },
+    },
+    MuiPaginationItem: {
+      styleOverrides: {
+        root: {
+          color: "#C9C9D3",
+          fontSize: "1.12rem",
+          "&.Mui-selected": {
+            backgroundColor: "transparent",
+            fontSize: "1.25rem",
+            color: "#ffffff",
+          },
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          fontFamily: "Jura",
+          padding: "12px 16px",
+          "@media (max-width:500px)": {
+            fontSize: "0.75rem",
+            padding: "12px 8px",
           },
         },
       },

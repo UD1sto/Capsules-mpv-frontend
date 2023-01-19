@@ -1,9 +1,11 @@
 import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { PoolItem } from "../pool-item/PoolItem";
+import { filters, POOLS } from "@/content";
+import { useMediaQuery } from "@material-ui/core";
+import { SwitchFilter } from "@/components";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -22,7 +24,7 @@ function TabPanel(props: TabPanelProps) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box sx={{ pt: 3, pb: 5 }}>{children}</Box>}
     </div>
   );
 }
@@ -41,22 +43,27 @@ export function TabsPanel() {
     setValue(newValue);
   };
 
+  const xs = useMediaQuery("(min-width:770px)");
+
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+    <Box>
+      <Box>
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          aria-label="tabs"
+          textColor="secondary"
+          centered={!xs}
         >
           <Tab label="Borrow using LP" {...a11yProps(0)} />
-          <Tab label="Borrow using Crypto tockens" {...a11yProps(1)} />
+          <Tab label={`Borrow using Crypto tockens`} {...a11yProps(1)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <PoolItem />
-        <PoolItem />
-        <PoolItem />
+        <SwitchFilter filters={filters} />
+        {POOLS.map((pool) => (
+          <PoolItem poolItem={pool} />
+        ))}
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two

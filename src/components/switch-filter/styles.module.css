@@ -1,0 +1,27 @@
+.switchBox {
+  flex-direction: row;
+  background-color: rgba(60, 60, 60, 0.2);
+  border-radius: 50px;
+  margin-bottom: 20px;
+  width: fit-content;
+  padding: 5px;
+}
+.switchBox button {
+  padding: 6px 16px !important;
+  width: fit-content;
+  min-width: fit-content;
+  font-family: "Exo";
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+@media (max-width: 770px) {
+  .switchBox {
+    background-color: transparent;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  .switchBox button {
+    font-size: 0.87rem;
+    margin: 8px 8px 0;
+  }
+}

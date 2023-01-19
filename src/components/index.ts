@@ -9,3 +9,4 @@ export * from "./main-menu/MainMenu";
 export * from "./tabs/Tabs";
 export * from "./card/Card";
 export * from "./pool-item/PoolItem";
+export * from "./switch-filter/SwitchFilter";
