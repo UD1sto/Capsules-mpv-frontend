@@ -14,3 +14,4 @@ export * from "./table/table";
 export * from "./dashboard/index";
 export * from "./select-input/Select";
 export * from "./add-liquidity";
+export * from "./faq/FaqItem";

@@ -17,3 +17,7 @@ export const NetIcon = (props: object) => (
 export const ApyIcon = (props: object) => (
   <img src="icons/apy.svg" {...props} />
 );
+
+export const Close = (props: object) => (
+  <img src="icons/closeSerif.svg" {...props} />
+);
