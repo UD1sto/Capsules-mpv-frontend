@@ -8,7 +8,8 @@ const themeOptions: ThemeOptions = {
       dark: "#4048B7",
     },
     background: {
-      default: "rgba(60, 60, 60, 0.2)",
+      default: "rgba(60, 60, 60,0.2)",
+      paper: "#00010d",
     },
     secondary: {
       main: "#FFFFFF",
@@ -94,9 +95,7 @@ const themeOptions: ThemeOptions = {
             color: "#FFFFFF",
             backgroundColor: "transparent",
             ":hover": {
-              border: `2px solid`,
-              borderColor: `#8790ff`,
-              backgroundColor: "transparent",
+              backgroundColor: "#5864FF",
             },
           },
         },
@@ -122,6 +121,7 @@ const themeOptions: ThemeOptions = {
         },
       },
     },
+
     MuiPaginationItem: {
       styleOverrides: {
         root: {

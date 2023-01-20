@@ -12,4 +12,7 @@
   .noContent{
     font-size: 0.87rem;
   }
+  .cardBox{
+    padding: 25px 20px;
+  }
 }

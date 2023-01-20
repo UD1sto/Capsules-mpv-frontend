@@ -12,3 +12,4 @@ export * from "./pool-item/PoolItem";
 export * from "./switch-filter/SwitchFilter";
 export * from "./table/table";
 export * from "./dashboard/index";
+export * from "./select-input/Select";

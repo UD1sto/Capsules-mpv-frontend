@@ -1,4 +1,4 @@
-import { BasicTable, Card, Header } from "@/components";
+import { BasicTable, Card, Header, SelectInput } from "@/components";
 import {
   BORROW_HEADERS,
   SUPPLY_HEADERS,
@@ -12,17 +12,58 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import { ApyIcon, NetIcon } from "public/icons";
 
-const style = {
-  maxWidth: 570,
-  minWidth: 420,
-};
+const icons = [
+  {
+    title: "Net worth",
+    icon: <NetIcon style={{ width: "20px" }} />,
+    value: "0$",
+  },
+  {
+    title: "Net APY",
+    icon: <ApyIcon style={{ width: "22px" }} />,
+    value: "0%",
+  },
+];
 
 export function BorrowTokens() {
   const md = useMediaQuery("(min-width:1200px)");
 
   return (
     <Stack spacing={md ? 4 : 2}>
+      <SelectInput />
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        maxWidth={350}
+        sx={{
+          mt: "30px!important",
+          mb: md ? "30px!important" : "70px!important",
+        }}
+      >
+        {icons.map((icon) => (
+          <Stack direction="row" spacing={2}>
+            <Stack
+              sx={{
+                width: "50px",
+                height: "50px",
+                backgroundColor: (theme) => theme.palette.background.default,
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {icon.icon}
+            </Stack>
+            <Stack>
+              <Typography>{icon.title}</Typography>
+              <Typography fontWeight={500} fontSize="1.12rem">
+                {icon.value}
+              </Typography>
+            </Stack>
+          </Stack>
+        ))}
+      </Stack>
       <Stack direction={md ? "row" : "column"} spacing={md ? 4 : 0}>
         <Card
           title="Your supplies"
@@ -38,6 +79,28 @@ export function BorrowTokens() {
               <TableItem row={row} headers={SUPPLY_HEADERS} supply />
             ))}
           </BasicTable>
+          {!md && (
+            <Typography
+              variant="h3"
+              textAlign={"center"}
+              sx={{
+                fontSize: { xs: "1rem", sm: "1rem" },
+                color: md
+                  ? (theme) => theme.palette.secondary.main
+                  : (theme) => theme.palette.primary.dark,
+                textTransform: "none",
+                ":hover": {
+                  color: md
+                    ? (theme) => theme.palette.primary.dark
+                    : (theme) => theme.palette.primary.main,
+                  cursor: "pointer",
+                  transition: "0.3s",
+                },
+              }}
+            >
+              See more +
+            </Typography>
+          )}
         </Card>
         <Card title="Assets to borrow">
           <BasicTable headers={BORROW_HEADERS}>
@@ -45,6 +108,28 @@ export function BorrowTokens() {
               <TableItem row={row} headers={BORROW_HEADERS} />
             ))}
           </BasicTable>
+          {!md && (
+            <Typography
+              variant="h3"
+              textAlign={"center"}
+              sx={{
+                fontSize: { xs: "1rem", sm: "1rem" },
+                color: md
+                  ? (theme) => theme.palette.secondary.main
+                  : (theme) => theme.palette.primary.dark,
+                textTransform: "none",
+                ":hover": {
+                  color: md
+                    ? (theme) => theme.palette.primary.dark
+                    : (theme) => theme.palette.primary.main,
+                  cursor: "pointer",
+                  transition: "0.3s",
+                },
+              }}
+            >
+              See more +
+            </Typography>
+          )}
         </Card>
       </Stack>
     </Stack>
@@ -60,6 +145,7 @@ const TableItem = ({
   headers: Array<Header>;
   supply?: boolean;
 }) => {
+  const md = useMediaQuery("(min-width:1200px)");
   return (
     <TableRow
       sx={{
@@ -93,9 +179,14 @@ const TableItem = ({
                   variant="h3"
                   sx={{
                     fontSize: { xs: "1rem", sm: "1rem" },
+                    color: md
+                      ? (theme) => theme.palette.secondary.main
+                      : (theme) => theme.palette.primary.dark,
                     textTransform: "none",
                     ":hover": {
-                      color: (theme) => theme.palette.primary.dark,
+                      color: md
+                        ? (theme) => theme.palette.primary.dark
+                        : (theme) => theme.palette.primary.main,
                       cursor: "pointer",
                       transition: "0.3s",
                     },

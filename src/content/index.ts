@@ -177,3 +177,18 @@ export const TABLE_DATA2 = [
     apyStable: "-",
   },
 ];
+
+export const SELECT_ITEMS = [
+  {
+    label: "Ethereum Market",
+    value: "Eth",
+  },
+  {
+    label: "Bitcoin Market",
+    value: "Btc",
+  },
+  {
+    label: "Binance Coin Market",
+    value: "Bnb Market",
+  },
+];

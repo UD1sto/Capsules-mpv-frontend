@@ -27,6 +27,7 @@ export function BasicTable({ headers, children }: BasicTableProps) {
                 sx={{
                   fontSize: "0.75rem",
                   color: (theme) => theme.palette.secondary.dark,
+                  pl: index === 0 ? 0 : 2,
                 }}
                 align={index === 0 ? "left" : "center"}
               >
@@ -35,9 +36,7 @@ export function BasicTable({ headers, children }: BasicTableProps) {
             ))}
           </TableRow>
         </TableHead>
-        <TableBody>
-          {children}
-        </TableBody>
+        <TableBody>{children}</TableBody>
       </Table>
     </TableContainer>
   );
