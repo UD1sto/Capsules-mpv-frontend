@@ -63,6 +63,13 @@ const themeOptions: ThemeOptions = {
     subtitle1: {
       color: "#C9C9D3",
       fontWeight: 500,
+      fontFamily: "Exo",
+    },
+    subtitle2: {
+      color: "#C9C9D3",
+      fontWeight: 400,
+      fontFamily: "Exo",
+      fontSize: "0.87rem",
     },
   },
   breakpoints: {

@@ -1,11 +1,9 @@
 import { BorrowLP, BorrowTokens, TabsPanel } from "@/components";
 import { Stack, Typography } from "@mui/material";
-import { Container } from "@mui/system";
-
 
 export default function Dashboard() {
   return (
-    <Container maxWidth="xl">
+    <>
       <Stack alignItems="center">
         <Typography variant="h2" m="50px 0 20px">
           Dashboard
@@ -31,6 +29,6 @@ export default function Dashboard() {
           />
         </Stack>
       </Stack>
-    </Container>
+    </>
   );
 }

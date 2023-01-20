@@ -13,3 +13,4 @@ export * from "./switch-filter/SwitchFilter";
 export * from "./table/table";
 export * from "./dashboard/index";
 export * from "./select-input/Select";
+export * from "./add-liquidity";

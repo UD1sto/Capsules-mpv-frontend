@@ -39,7 +39,7 @@ export function BorrowTokens() {
         maxWidth={350}
         sx={{
           mt: "30px!important",
-          mb: md ? "30px!important" : "70px!important",
+          mb: md ? "10px!important" : "70px!important",
         }}
       >
         {icons.map((icon) => (
