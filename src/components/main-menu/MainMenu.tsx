@@ -6,15 +6,16 @@ import Container from "@mui/material/Container";
 import { Logo } from "../logo/Logo";
 import { Button } from "@mui/material";
 import { MobileMenu } from "../mobile-menu/MobileMenu";
+import Link from "next/link";
 
 const pages = [
-  "Dashboard",
-  "My positions",
-  "Pools",
-  "Swap",
-  "FAQ",
-  "Help",
-  "Contact us",
+  { path: "/dashboard", title: "Dashboard" },
+  { path: "/add-liquidity", title: "My positions" },
+  { path: "/", title: "Pools" },
+  { path: "/", title: "Swap" },
+  { path: "/faq", title: "FAQ" },
+  { path: "/", title: "Help" },
+  { path: "/", title: "Contact us" },
 ];
 
 export function MainMenu() {
@@ -51,21 +52,23 @@ export function MainMenu() {
 
           <Box sx={{ display: { xs: "none", lg: "flex" } }}>
             {pages.map((page) => (
-              <Typography
-                key={page}
-                onClick={handleCloseNavMenu}
-                variant="subtitle1"
-                sx={{
-                  my: 2,
-                  px: "20px",
-                  ":hover": {
-                    cursor: "pointer",
-                    textShadow: "#c9c9d394 0px 0px 15px",
-                  },
-                }}
-              >
-                {page}
-              </Typography>
+              <Link href={page.path}>
+                <Typography
+                  key={page.title}
+                  onClick={handleCloseNavMenu}
+                  variant="subtitle1"
+                  sx={{
+                    my: 2,
+                    px: "20px",
+                    ":hover": {
+                      cursor: "pointer",
+                      textShadow: "#c9c9d394 0px 0px 15px",
+                    },
+                  }}
+                >
+                  {page.title}
+                </Typography>
+              </Link>
             ))}
             <Button
               variant="contained"

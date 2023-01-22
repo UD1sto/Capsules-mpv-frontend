@@ -7,7 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { Logo } from "../logo/Logo";
 import { Button, Stack } from "@mui/material";
 import { CloseIcon, MenuIcon } from "public/icons";
-
+import Link from "next/link";
 
 interface MobileMenuProps {
   handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void;
@@ -32,7 +32,7 @@ export function MobileMenu({
       >
         <MenuIcon />
       </IconButton>
-      
+
       <Menu
         id="menu-appbar"
         anchorEl={anchorElNav}
@@ -88,26 +88,28 @@ export function MobileMenu({
         </Stack>
         {pages.map((page) => (
           <MenuItem
-            key={page}
+            key={page.title}
             onClick={handleCloseNavMenu}
             sx={{
               padding: "25px 0",
               border: "1px solid  rgba(60, 60, 60, 0.2)",
             }}
           >
-            <Typography
-              textAlign="center"
-              sx={{
-                textAlign: "center",
-                width: "100%",
-                textTransform: "uppercase",
-                fontWeight: 500,
-                fontSize: "1.5rem",
-                letterSpacing: "1px",
-              }}
-            >
-              {page}
-            </Typography>
+            <Link href={page.path}>
+              <Typography
+                textAlign="center"
+                sx={{
+                  textAlign: "center",
+                  width: "100%",
+                  textTransform: "uppercase",
+                  fontWeight: 500,
+                  fontSize: "1.5rem",
+                  letterSpacing: "1px",
+                }}
+              >
+                {page.title}
+              </Typography>
+            </Link>
           </MenuItem>
         ))}
         <Stack sx={{ alignItems: "center", m: "30px" }}>
