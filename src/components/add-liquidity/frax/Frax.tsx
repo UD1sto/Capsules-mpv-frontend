@@ -45,8 +45,12 @@ export const TokenItem = () => {
   const sm = useMediaQuery("(min-width:500px)");
 
   return (
-    <Stack direction="row" spacing={2} sx={{ flexGrow: 1, mt: !sm ? 2 : 0 }}>
-      <img src="/images/bnc.png" style={{ width: "30px", height: "30px" }}  alt="token"/>
+    <Stack direction="row" spacing={1} sx={{ flexGrow: 1, m: 2, ml: 0 }}>
+      <img
+        src="/images/bnc.png"
+        style={{ width: "30px", height: "30px" }}
+        alt="token"
+      />
       <Stack>
         <Typography mb="18px">Ethereum</Typography>
         <Typography>290,801,74</Typography>

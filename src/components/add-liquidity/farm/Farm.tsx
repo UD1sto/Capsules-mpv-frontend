@@ -1,13 +1,10 @@
 import { Button, Stack, Typography, useMediaQuery } from "@mui/material";
+import styles from "./styles.module.css";
 
 export function Farm() {
   const sm = useMediaQuery("(min-width:500px)");
   return (
-    <Stack
-      direction={sm ? "row" : "column"}
-      justifyContent="space-between"
-      my="15px"
-    >
+    <Stack className={styles.farmBox}>
       <Stack>
         <Typography>LP Available</Typography>
         <Typography mb="20px" variant="subtitle2">
@@ -16,17 +13,9 @@ export function Farm() {
         <Typography>LP Staked</Typography>
         <Typography variant="subtitle2">0.0</Typography>
       </Stack>
-      <Stack
-        direction={!sm ? "row" : "column"}
-        mt={sm ? 0 : 2}
-        justifyContent={!sm ? "center" : "flex-start"}
-      >
-        <Button variant="contained" sx={{ mb: sm ? 1 : 0, width: "140px" }}>
-          Stake all
-        </Button>
-        <Button variant="outlined" sx={{ ml: sm ? 0 : 1, width: "140px" }}>
-          Unstake all
-        </Button>
+      <Stack className={styles.btnBox}>
+        <Button variant="contained">Stake all</Button>
+        <Button variant="outlined">Unstake all</Button>
       </Stack>
     </Stack>
   );

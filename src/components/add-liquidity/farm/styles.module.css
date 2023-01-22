@@ -1,0 +1,32 @@
+.farmBox {
+  justify-content: space-between;
+  margin: 15px 0;
+  flex-direction: row;
+}
+.btnBox {
+  flex-direction: column;
+}
+.btnBox button {
+  width: 140px;
+}
+.btnBox button:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 500px) {
+  .farmBox {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  .btnBox {
+    flex-direction: row;
+    margin-top: 1rem;
+  }
+  .btnBox button:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .btnBox button:not(:last-child) {
+    margin-right: 8px;
+  }
+}
