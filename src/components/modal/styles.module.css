@@ -1,0 +1,29 @@
+.modalBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: #191a27;
+  padding: 2rem;
+  border: 0;
+  outline: 0;
+}
+.closeIcon {
+  position: absolute;
+  right: 30px;
+  top: 34px;
+}
+.closeIcon:hover {
+  cursor: pointer;
+}
+
+.modalBox h3 {
+  padding-right: 60px;
+}
+
+@media (max-width: 800px) {
+  .modalBox {
+   width: 91%;
+  }
+}
