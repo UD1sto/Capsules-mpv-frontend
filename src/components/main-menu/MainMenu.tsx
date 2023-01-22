@@ -52,7 +52,7 @@ export function MainMenu() {
 
           <Box sx={{ display: { xs: "none", lg: "flex" } }}>
             {pages.map((page) => (
-              <Link href={page.path}>
+              <Link href={page.path} key={page.title}>
                 <Typography
                   key={page.title}
                   onClick={handleCloseNavMenu}

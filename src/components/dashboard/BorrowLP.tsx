@@ -8,7 +8,7 @@ export function BorrowLP() {
     <Stack >
       <SwitchFilter filters={filters} />
       {POOLS.map((pool) => (
-        <PoolItem poolItem={pool} />
+        <PoolItem poolItem={pool} key={pool.title}/>
       ))}
       <Stack alignItems="center" mt={5}>
         <Pagination count={10} />

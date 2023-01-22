@@ -41,7 +41,7 @@ export function SelectInput() {
     setAge(event.target.value as string);
   };
 
-  const md = useMediaQuery("(min-width:500px)");
+  // const md = useMediaQuery("(min-width:500px)");
 
   return (
     <Box sx={{ minWidth: 200 }}>
@@ -63,6 +63,7 @@ export function SelectInput() {
               sx={{
                 padding: "15px 20px",
               }}
+              key={item.label}
             >
               <Stack direction="row" alignItems="center">
                 <img

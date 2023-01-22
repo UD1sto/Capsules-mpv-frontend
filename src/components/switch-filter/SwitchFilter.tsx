@@ -28,6 +28,7 @@ export function SwitchFilter(props: SwitchFilterProps) {
         <Button
           variant={isCurrentFilter(filter.query) ? "contained" : "text"}
           onClick={() => changeFilter(filter.query)}
+          key={filter.label}
           sx={{
             ...(!isCurrentFilter(filter.query) && {
               backgroundColor: {

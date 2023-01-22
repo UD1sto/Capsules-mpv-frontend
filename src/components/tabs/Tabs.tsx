@@ -54,12 +54,12 @@ export function TabsPanel({ tabs }: TabsProps) {
           centered={!xs}
         >
           {tabs.map((tab, index) => (
-            <Tab label={tab.label} {...a11yProps(index)} />
+            <Tab label={tab.label} {...a11yProps(index)} key={tab.label} />
           ))}
         </Tabs>
       </Box>
       {tabs.map((tab, index) => (
-        <TabPanel value={value} index={index}>
+        <TabPanel value={value} index={index} key={tab.label}>
           {tab.component}
         </TabPanel>
       ))}

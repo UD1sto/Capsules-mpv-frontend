@@ -30,6 +30,7 @@ export function BasicTable({ headers, children }: BasicTableProps) {
                   pl: index === 0 ? 0 : 2,
                 }}
                 align={index === 0 ? "left" : "center"}
+                key={header.label}
               >
                 {header.label}
               </TableCell>

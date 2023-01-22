@@ -1,4 +1,5 @@
 import { Button, Stack, Typography } from "@mui/material";
+import styles from "./styles.module.css";
 
 export function SwapForm() {
   return (
@@ -6,25 +7,19 @@ export function SwapForm() {
       <Stack
         sx={{
           backgroundColor: (theme) => theme.palette.background.default,
-          p: "15px 20px",
-          flexDirection: "row",
-          alignItems: "center",
-          borderRadius: "25px",
         }}
+        className={styles.inputBox}
       >
-        <img src="/images/bnc.png" style={{ width: "30px", height: "30px" }} />
+        <img src="/images/bnc.png" alt="bnc"/>
         <Typography m="0 10px">Ethereum</Typography>
       </Stack>
       <Stack
         sx={{
           backgroundColor: (theme) => theme.palette.background.default,
-          p: "15px 20px",
-          flexDirection: "row",
-          alignItems: "center",
-          borderRadius: "25px",
         }}
+        className={styles.inputBox}
       >
-        <img src="/images/bnc.png" style={{ width: "30px", height: "30px" }} />
+        <img src="/images/bnc.png" alt="bnc"/>
         <Typography m="0 10px">Ethereum</Typography>
       </Stack>
       <Typography variant="subtitle1">Bonus: 00.00%</Typography>

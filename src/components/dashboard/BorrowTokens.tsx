@@ -43,7 +43,7 @@ export function BorrowTokens() {
         }}
       >
         {icons.map((icon) => (
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={2} key={icon.title}>
             <Stack
               sx={{
                 width: "50px",
@@ -76,7 +76,12 @@ export function BorrowTokens() {
         <Card title="Assets to supply" sx={{ mb: md ? 0 : 2 }}>
           <BasicTable headers={SUPPLY_HEADERS}>
             {TABLE_DATA.map((row) => (
-              <TableItem row={row} headers={SUPPLY_HEADERS} supply />
+              <TableItem
+                row={row}
+                headers={SUPPLY_HEADERS}
+                supply
+                key={row.assets}
+              />
             ))}
           </BasicTable>
           {!md && (
@@ -105,7 +110,7 @@ export function BorrowTokens() {
         <Card title="Assets to borrow">
           <BasicTable headers={BORROW_HEADERS}>
             {TABLE_DATA2.map((row) => (
-              <TableItem row={row} headers={BORROW_HEADERS} />
+              <TableItem row={row} headers={BORROW_HEADERS} key={row.assets} />
             ))}
           </BasicTable>
           {!md && (
@@ -164,6 +169,7 @@ const TableItem = ({
                 fontSize: { xs: "0.87rem", sm: "1rem" },
                 letterSpacing: "0.05em",
               }}
+              key={header.label}
             >
               <Stack direction="row" alignItems="center">
                 <img
@@ -220,6 +226,7 @@ const TableItem = ({
               p: "20px 0 30px",
               verticalAlign: "top",
             }}
+            key={header.label}
           >
             {row[header.value]}
           </TableCell>

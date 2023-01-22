@@ -1,5 +1,4 @@
 import { Typography, useMediaQuery } from "@mui/material";
-import { CloseSerifIcon } from "public/icons";
 import { Card } from "../card/Card";
 import styles from "./styles.module.css";
 
