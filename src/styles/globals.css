@@ -40,6 +40,8 @@ a {
 body {
   position: relative;
   background-color: #141414;
+  padding-right: 4px!important;
+  overflow-y: scroll!important;
 }
 ::-webkit-scrollbar {
   background-color: #141414;
