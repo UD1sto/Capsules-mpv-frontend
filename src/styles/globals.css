@@ -41,4 +41,11 @@ body {
   position: relative;
   background-color: #141414;
 }
-
+::-webkit-scrollbar {
+  background-color: #141414;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(156, 156, 156);
+  border-radius: 10px;
+}
