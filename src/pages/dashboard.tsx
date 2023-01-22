@@ -1,7 +1,15 @@
 import { BorrowLP, BorrowTokens, TabsPanel } from "@/components";
 import { Stack, Typography } from "@mui/material";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function Dashboard() {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!router.query.filter) router.push('?filter=all');
+  }, []);
+
   return (
     <>
       <Stack alignItems="center">
