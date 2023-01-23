@@ -18,3 +18,4 @@ export * from "./faq/FaqItem";
 export * from "./modal/Modal";
 export * from "./swap-form/SwapForm";
 export * from "./contact-form/ContactForm";
+export * from "./input/Input";

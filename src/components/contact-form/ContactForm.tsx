@@ -1,23 +1,10 @@
-import {
-  Box,
-  Button,
-  InputAdornment,
-  Stack,
-  TextField,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Button, Stack, useMediaQuery } from "@mui/material";
 import { EmailIcon, TextIcon, UserIcon } from "public/icons";
-
-const style = {
-  flex: 1,
-  "& .MuiInput-input": {
-    py: "13px",
-    fontSize: "0.87rem",
-  },
-};
+import { Input } from "../input/Input";
 
 export function ContactForm() {
   const sm = useMediaQuery("(min-width:500px)");
+
   return (
     <Stack
       spacing={sm ? 8 : 4}
@@ -28,46 +15,28 @@ export function ContactForm() {
       }}
     >
       <Stack direction={sm ? "row" : "column"} spacing={sm ? 2 : 4}>
-        <TextField
+        <Input
           placeholder="Your name ..."
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <UserIcon />
-              </InputAdornment>
-            ),
-          }}
-          sx={style}
+          icon={<UserIcon />}
           variant="standard"
+          type="text"
         />
-        <TextField
+        <Input
           placeholder="Your email ..."
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <EmailIcon />
-              </InputAdornment>
-            ),
-          }}
+          icon={<EmailIcon />}
           variant="standard"
-          sx={style}
+          type="email"
         />
       </Stack>
 
       <Box>
-        <TextField
-          fullWidth
+        <Input
           placeholder="Your text ..."
-          multiline
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <TextIcon />
-              </InputAdornment>
-            ),
-          }}
+          icon={<TextIcon />}
           variant="standard"
-          sx={style}
+          type="text"
+          multiline
+          fullWidth
         />
       </Box>
       <Stack alignItems={"center"}>

@@ -11,7 +11,7 @@ import Link from "next/link";
 const pages = [
   { path: "/dashboard", title: "Dashboard" },
   { path: "/add-liquidity", title: "My positions" },
-  { path: "/", title: "Pools" },
+  { path: "/stake", title: "Pools" },
   { path: "/swap", title: "Swap" },
   { path: "/faq", title: "FAQ" },
   { path: "/", title: "Help" },
