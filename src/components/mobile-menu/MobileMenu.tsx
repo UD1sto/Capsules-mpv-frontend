@@ -86,16 +86,17 @@ export function MobileMenu({
             <CloseIcon />
           </IconButton>
         </Stack>
+
         {pages.map((page) => (
-          <MenuItem
-            key={page.title}
-            onClick={handleCloseNavMenu}
-            sx={{
-              padding: "25px 0",
-              border: "1px solid  rgba(60, 60, 60, 0.2)",
-            }}
-          >
-            <Link href={page.path}>
+          <Link href={page.path}>
+            <MenuItem
+              key={page.title}
+              onClick={handleCloseNavMenu}
+              sx={{
+                padding: "25px 0",
+                border: "1px solid  rgba(60, 60, 60, 0.2)",
+              }}
+            >
               <Typography
                 textAlign="center"
                 sx={{
@@ -109,8 +110,8 @@ export function MobileMenu({
               >
                 {page.title}
               </Typography>
-            </Link>
-          </MenuItem>
+            </MenuItem>
+          </Link>
         ))}
         <Stack sx={{ alignItems: "center", m: "30px" }}>
           <Button variant="contained" sx={{ width: "fit-content" }}>
