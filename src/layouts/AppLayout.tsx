@@ -29,7 +29,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           alt="ilustration2"
           className={styles.il2}
         />
-        <Container maxWidth="xl" >{children}</Container>
+        <Container maxWidth="xl">{children}</Container>
       </main>
     </>
   );

@@ -1,6 +1,7 @@
 import { BasicTable, Card, Header, SelectInput } from "@/components";
 import {
   BORROW_HEADERS,
+  SELECT_ITEMS,
   SUPPLY_HEADERS,
   TABLE_DATA,
   TABLE_DATA2,
@@ -32,7 +33,7 @@ export function BorrowTokens() {
 
   return (
     <Stack spacing={md ? 4 : 2}>
-      <SelectInput />
+      <SelectInput options={SELECT_ITEMS} />
       <Stack
         direction="row"
         justifyContent="space-between"

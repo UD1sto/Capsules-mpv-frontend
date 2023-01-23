@@ -1,0 +1,29 @@
+.inputBox {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.inputBox input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  color: white;
+  font-family: "Exo";
+}
+.divider {
+  width: calc(100% + 60px);
+  height: 2px;
+  background-color: #14141491;
+  margin: 20px 0 20px -31px;
+  justify-content: center;
+  align-items: center;
+}
+.divider img {
+  width: 32px;
+  height:32px;
+  background-color: #141414;
+  border-radius: 50%;
+  padding: 12px 8px;
+}

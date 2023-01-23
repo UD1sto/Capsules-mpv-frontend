@@ -1,7 +1,7 @@
 import { Button, Stack, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 
-export function SwapForm() {
+export function AddLiqForm() {
   return (
     <Stack spacing={2.2}>
       {[1, 2].map((el) => (

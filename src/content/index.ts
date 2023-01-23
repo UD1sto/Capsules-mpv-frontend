@@ -193,6 +193,21 @@ export const SELECT_ITEMS = [
   },
 ];
 
+export const SELECT_ITEMS2 = [
+  {
+    label: "Eth",
+    value: "Eth",
+  },
+  {
+    label: "Btc",
+    value: "Btc",
+  },
+  {
+    label: "Bin",
+    value: "Bnb Market",
+  },
+];
+
 export const FAQ = [
   {
     title: "Lorem ipsum dolor sit amet?",

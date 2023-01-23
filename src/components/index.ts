@@ -16,3 +16,4 @@ export * from "./select-input/Select";
 export * from "./add-liquidity";
 export * from "./faq/FaqItem";
 export * from "./modal/Modal";
+export * from "./swap-form/SwapForm";

@@ -12,7 +12,7 @@ const pages = [
   { path: "/dashboard", title: "Dashboard" },
   { path: "/add-liquidity", title: "My positions" },
   { path: "/", title: "Pools" },
-  { path: "/", title: "Swap" },
+  { path: "/swap", title: "Swap" },
   { path: "/faq", title: "FAQ" },
   { path: "/", title: "Help" },
   { path: "/", title: "Contact us" },

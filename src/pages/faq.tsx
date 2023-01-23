@@ -29,6 +29,7 @@ export default function FAQ() {
           </Grid>
         ))}
       </Grid>
+      
       <BasicModal open={open} setOpen={setOpen}>
         <Typography variant="h3" mb="30px">
           {currentItem?.title}

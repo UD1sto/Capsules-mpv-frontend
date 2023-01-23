@@ -4,6 +4,7 @@ interface IconProps {
   style?: CSS.Properties;
   className?: string;
   variant?: "primary" | "secondary";
+  onClick?: () => void;
 }
 
 export const CloseIcon = (props: IconProps) => {

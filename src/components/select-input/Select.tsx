@@ -4,14 +4,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { ArrowDownIcon } from "public/icons";
-import {
-  InputBase,
-  Stack,
-  styled,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
-import { SELECT_ITEMS } from "@/content";
+import { InputBase, Stack, styled, Typography } from "@mui/material";
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   "& .MuiInputBase-input": {
@@ -26,7 +19,11 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     "&:focus": {
       borderRadius: "50px",
     },
+    "&.MuiSelect-select": {
+      minHeight: "1rem",
+    },
   },
+
   "& .MuiSelect-icon": {
     right: "20px",
     top: "calc(50% - 5px)",
@@ -34,19 +31,16 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export function SelectInput() {
-  const [age, setAge] = React.useState(SELECT_ITEMS[0].value);
+export function SelectInput({ options, size }) {
+  const [age, setAge] = React.useState(options[0].value);
 
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
   };
 
-  // const md = useMediaQuery("(min-width:500px)");
-
   return (
-    <Box sx={{ minWidth: 200 }}>
+    <Box sx={{ minWidth: 50 }}>
       <FormControl>
-        {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
         <Select
           IconComponent={ArrowDownIcon}
           labelId="select-label"
@@ -55,9 +49,9 @@ export function SelectInput() {
           onChange={handleChange}
           input={<BootstrapInput />}
           sx={{ borderRadius: "50px" }}
-          defaultValue={SELECT_ITEMS[0].value}
+          defaultValue={options[0].value}
         >
-          {SELECT_ITEMS.map((item) => (
+          {options.map((item) => (
             <MenuItem
               value={item.value}
               sx={{
@@ -71,7 +65,7 @@ export function SelectInput() {
                   alt="icon"
                   style={{ width: "27px", marginRight: "13px", height: "27px" }}
                 />
-                <Typography variant="h3" marginRight="25px">
+                <Typography variant="h3" marginRight="25px" fontSize={size}>
                   {item.label}
                 </Typography>
               </Stack>
