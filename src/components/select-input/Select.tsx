@@ -5,6 +5,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { ArrowDownIcon } from "public/icons";
 import { InputBase, Stack, styled, Typography } from "@mui/material";
+import styles from "./styles.module.css";
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   "& .MuiInputBase-input": {
@@ -54,8 +55,6 @@ export function SelectInput({ options, size }: SelectProps) {
       <FormControl>
         <Select
           IconComponent={ArrowDownIcon}
-          labelId="select-label"
-          id="demo-simple-select"
           value={age}
           onChange={handleChange}
           input={<BootstrapInput />}
@@ -63,33 +62,24 @@ export function SelectInput({ options, size }: SelectProps) {
           defaultValue={options[0].value}
         >
           {options.map((item: Option) => (
-            <MenuItem
-              value={item.value}
-              sx={{
-                padding: "15px 20px",
-              }}
-              key={item.label}
-            >
-              <Stack direction="row" alignItems="center">
-                {item.img && (
-                  <img
-                    src={item.img}
-                    alt="icon"
-                    style={{
-                      width: "27px",
-                      marginRight: "13px",
-                      height: "27px",
-                    }}
-                  />
-                )}
-                <Typography variant="h3" marginRight="25px" fontSize={size}>
-                  {item.label}
-                </Typography>
-              </Stack>
-            </MenuItem>
+            <Item item={item} size={size} />
           ))}
         </Select>
       </FormControl>
     </Box>
+  );
+}
+
+export function Item(props: { item: Option; size?: string }): JSX.Element {
+  const { value, label, img } = props?.item || {};
+  return (
+    <MenuItem value={value} className={styles.menuItemBox} key={label}>
+      <Stack className={styles.menuItem}>
+        {img && <img src={img} alt="icon" />}
+        <Typography variant="h3" marginRight="25px" fontSize={props?.size}>
+          {label}
+        </Typography>
+      </Stack>
+    </MenuItem>
   );
 }

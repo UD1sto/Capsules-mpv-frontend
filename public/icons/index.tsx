@@ -39,6 +39,18 @@ export const ApyIcon = (props: IconProps) => (
   <img src="icons/apy.svg" {...props} />
 );
 
+export const TextIcon = (props: IconProps) => (
+  <img src="icons/text.svg" {...props} />
+);
+
+export const EmailIcon = (props: IconProps) => (
+  <img src="icons/email.svg" {...props} />
+);
+
+export const UserIcon = (props: IconProps) => (
+  <img src="icons/user.svg" {...props} />
+);
+
 export const CloseSerifIcon = (props: IconProps) => {
   const { variant, ...restProps } = props || {};
   switch (props?.variant) {

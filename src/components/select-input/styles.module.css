@@ -1,0 +1,12 @@
+.menuItemBox {
+  padding: 15px 20px;
+}
+.menuItem {
+  flex-direction: row;
+  align-items: center;
+}
+.menuItem img {
+  width: 27px;
+  margin-right: 13px;
+  height: 27px;
+}

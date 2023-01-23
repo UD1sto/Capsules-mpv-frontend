@@ -97,12 +97,12 @@ const themeOptions: ThemeOptions = {
         {
           props: { variant: "outlined" },
           style: {
-            border: `2px solid`,
-            borderColor: `#5864FF`,
+            border: `2px solid #5864FF`,
             color: "#FFFFFF",
             backgroundColor: "transparent",
             ":hover": {
               backgroundColor: "#5864FF",
+              border: `2px solid #5864FF`,
             },
           },
         },

@@ -15,7 +15,7 @@ const pages = [
   { path: "/swap", title: "Swap" },
   { path: "/faq", title: "FAQ" },
   { path: "/", title: "Help" },
-  { path: "/", title: "Contact us" },
+  { path: "/contact-us", title: "Contact us" },
 ];
 
 export function MainMenu() {
