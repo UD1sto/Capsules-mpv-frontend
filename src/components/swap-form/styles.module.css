@@ -12,6 +12,12 @@
   color: white;
   font-family: "Exo";
 }
+.inputBox input::-webkit-inner-spin-button,
+.inputBox input::-webkit-inner-outer-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .divider {
   width: calc(100% + 60px);
   height: 2px;
@@ -22,8 +28,21 @@
 }
 .divider img {
   width: 32px;
-  height:32px;
+  height: 32px;
   background-color: #141414;
   border-radius: 50%;
   padding: 12px 8px;
+}
+.textRestr {
+  max-width: 300px;
+}
+@media (max-width: 600px) {
+  .textRestr {
+    max-width: 150px;
+  }
+}
+@media (max-width: 400px) {
+  .textRestr {
+    max-width: 50px;
+  }
 }

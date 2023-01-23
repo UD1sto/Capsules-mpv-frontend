@@ -31,7 +31,18 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export function SelectInput({ options, size }) {
+interface Option {
+  label: string;
+  value: string;
+  img?: string;
+}
+
+interface SelectProps {
+  options: Array<Option>;
+  size?: string;
+}
+
+export function SelectInput({ options, size }: SelectProps) {
   const [age, setAge] = React.useState(options[0].value);
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -51,7 +62,7 @@ export function SelectInput({ options, size }) {
           sx={{ borderRadius: "50px" }}
           defaultValue={options[0].value}
         >
-          {options.map((item) => (
+          {options.map((item: Option) => (
             <MenuItem
               value={item.value}
               sx={{
@@ -60,11 +71,17 @@ export function SelectInput({ options, size }) {
               key={item.label}
             >
               <Stack direction="row" alignItems="center">
-                <img
-                  src="/images/bnc.png"
-                  alt="icon"
-                  style={{ width: "27px", marginRight: "13px", height: "27px" }}
-                />
+                {item.img && (
+                  <img
+                    src={item.img}
+                    alt="icon"
+                    style={{
+                      width: "27px",
+                      marginRight: "13px",
+                      height: "27px",
+                    }}
+                  />
+                )}
                 <Typography variant="h3" marginRight="25px" fontSize={size}>
                   {item.label}
                 </Typography>

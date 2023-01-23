@@ -182,14 +182,17 @@ export const SELECT_ITEMS = [
   {
     label: "Ethereum Market",
     value: "Eth",
+    img: "/images/bnc.png",
   },
   {
     label: "Bitcoin Market",
     value: "Btc",
+    img: "/images/bnc.png",
   },
   {
     label: "Binance Coin Market",
     value: "Bnb Market",
+    img: "/images/bnc.png",
   },
 ];
 
@@ -197,14 +200,17 @@ export const SELECT_ITEMS2 = [
   {
     label: "Eth",
     value: "Eth",
+    img: "/images/bnc.png",
   },
   {
     label: "Btc",
     value: "Btc",
+    img: "/images/bnc.png",
   },
   {
     label: "Bin",
     value: "Bnb Market",
+    img: "/images/bnc.png",
   },
 ];
 
