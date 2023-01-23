@@ -62,24 +62,21 @@ export function SelectInput({ options, size }: SelectProps) {
           defaultValue={options[0].value}
         >
           {options.map((item: Option) => (
-            <Item item={item} size={size} />
+            <MenuItem
+              value={item.value}
+              className={styles.menuItemBox}
+              key={item.label}
+            >
+              <Stack className={styles.menuItem}>
+                {item.img && <img src={item.img} alt="icon" />}
+                <Typography variant="h3" marginRight="25px" fontSize={{xs:size}}>
+                  {item.label}
+                </Typography>
+              </Stack>
+            </MenuItem>
           ))}
         </Select>
       </FormControl>
     </Box>
-  );
-}
-
-export function Item(props: { item: Option; size?: string }): JSX.Element {
-  const { value, label, img } = props?.item || {};
-  return (
-    <MenuItem value={value} className={styles.menuItemBox} key={label}>
-      <Stack className={styles.menuItem}>
-        {img && <img src={img} alt="icon" />}
-        <Typography variant="h3" marginRight="25px" fontSize={props?.size}>
-          {label}
-        </Typography>
-      </Stack>
-    </MenuItem>
   );
 }

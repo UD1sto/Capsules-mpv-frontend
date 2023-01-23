@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  padding: 0 30px;
 }
 .inputBox input {
   background-color: transparent;
@@ -19,10 +20,9 @@
 }
 
 .divider {
-  width: calc(100% + 60px);
   height: 2px;
   background-color: #14141491;
-  margin: 20px 0 20px -31px;
+  margin: 20px 0;
   justify-content: center;
   align-items: center;
 }
@@ -35,6 +35,9 @@
 }
 .textRestr {
   max-width: 300px;
+}
+.box button{
+    margin: 0 30px;
 }
 @media (max-width: 600px) {
   .textRestr {

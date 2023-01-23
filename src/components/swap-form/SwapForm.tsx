@@ -14,9 +14,9 @@ export function SwapForm() {
   };
 
   return (
-    <Card sx={{ borderRadius: "25px", maxWidth: 570 }}>
-      <Stack>
-        <Typography variant="subtitle2" mb={5}>
+    <Card sx={{ borderRadius: "25px", maxWidth: 570, px: "0!important" }}>
+      <Stack className={styles.box}>
+        <Typography variant="subtitle2" mb={5} ml="30px">
           Swap
         </Typography>
         <Stack>
@@ -30,7 +30,7 @@ export function SwapForm() {
             <SelectInput options={SELECT_ITEMS2} size="1rem" />
           </Stack>
           <Stack className={styles.inputBox}>
-            <Typography variant="subtitle2">0.0</Typography>
+            <Typography variant="subtitle2">$0.0</Typography>
             <Typography variant="subtitle2">Balance: 0</Typography>
           </Stack>
         </Stack>
@@ -40,12 +40,12 @@ export function SwapForm() {
         <Stack mb={4}>
           <Stack className={styles.inputBox}>
             <Typography fontSize="2rem" className={styles.textRestr}>
-              {(value * 2)}
+              {value * 2}
             </Typography>
             <SelectInput options={SELECT_ITEMS2} size="1rem" />
           </Stack>
           <Stack className={styles.inputBox}>
-            <Typography variant="subtitle2">0.0</Typography>
+            <Typography variant="subtitle2">$0.0</Typography>
             <Typography variant="subtitle2">Balance: 0</Typography>
           </Stack>
         </Stack>

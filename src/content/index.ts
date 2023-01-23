@@ -199,12 +199,12 @@ export const SELECT_ITEMS = [
 export const SELECT_ITEMS2 = [
   {
     label: "Eth",
-    value: "Eth",
+    value: "Eth2",
     img: "/images/bnc.png",
   },
   {
     label: "Btc",
-    value: "Btc",
+    value: "Btc2",
     img: "/images/bnc.png",
   },
   {
