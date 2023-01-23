@@ -14,7 +14,7 @@ export function SwapForm() {
   };
 
   return (
-    <Card sx={{ borderRadius: "25px", maxWidth: 570, px: "0!important" }}>
+    <Card sx={{ borderRadius: "25px", maxWidth: 570, px: "0!important",mt:4 }}>
       <Stack className={styles.box}>
         <Typography variant="subtitle2" mb={5} ml="30px">
           Swap

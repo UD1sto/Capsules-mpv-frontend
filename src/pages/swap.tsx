@@ -6,7 +6,7 @@ export default function Swap() {
     <Stack
       justifyContent="center"
       alignItems="center"
-      height="calc(100vh - 265px)"
+      minHeight="calc(100vh - 265px)"
     >
       <SwapForm />
     </Stack>

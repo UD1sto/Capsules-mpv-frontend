@@ -1,4 +1,4 @@
-import { Card, Farm, Frax } from "@/components";
+import { AddLiqForm, Card, Farm, Frax } from "@/components";
 import { SwapForm } from "@/components";
 import { Stack, useMediaQuery } from "@mui/material";
 
@@ -20,7 +20,7 @@ export default function AddLiquidity() {
     >
       <Stack sx={style.box}>
         <Card title="Add liquidity" sx={style.card}>
-          <SwapForm />
+          <AddLiqForm />
         </Card>
       </Stack>
 
