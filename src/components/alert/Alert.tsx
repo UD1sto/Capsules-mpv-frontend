@@ -20,7 +20,7 @@ interface AlertProps {
 export function Alert(props: AlertProps) {
   const md = useMediaQuery("(min-width:800px)");
   const { title, actionTitle, handleAction, opened, setOpened, ...rest } =
-    props;
+    props || {};
 
   const handleClose = () => {
     setOpened(false);

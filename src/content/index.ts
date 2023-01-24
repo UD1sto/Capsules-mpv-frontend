@@ -132,19 +132,19 @@ export const TABLE_DATA = [
     collaratel: "-",
   },
   {
-    assets: "Ruby1010/1215",
+    assets: "Ruby1010/1216",
     walletBalance: 0,
     apy: "1.16%",
     collaratel: "-",
   },
   {
-    assets: "Ruby1010/1215",
+    assets: "Ruby1010/1217",
     walletBalance: 0,
     apy: "1.16%",
     collaratel: "-",
   },
   {
-    assets: "Ruby1010/1215",
+    assets: "Ruby1010/1218",
     walletBalance: 0,
     apy: "1.16%",
     collaratel: "-",
@@ -159,19 +159,19 @@ export const TABLE_DATA2 = [
     apyStable: "-",
   },
   {
-    assets: "Ruby1010/1215",
+    assets: "Ruby1010/1216",
     available: 0,
     apyVar: "1.16%",
     apyStable: "-",
   },
   {
-    assets: "Ruby1010/1215",
+    assets: "Ruby1010/1217",
     available: 0,
     apyVar: "1.16%",
     apyStable: "-",
   },
   {
-    assets: "Ruby1010/1215",
+    assets: "Ruby1010/1218",
     available: 0,
     apyVar: "1.16%",
     apyStable: "-",
@@ -216,7 +216,22 @@ export const SELECT_ITEMS2 = [
 
 export const FAQ = [
   {
-    title: "Lorem ipsum dolor sit amet?",
+    title: "1. Lorem ipsum dolor sit amet?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
+  },
+  {
+    title: "2. Lorem ipsum dolor sit amet?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
+  },
+  {
+    title: "3. Lorem ipsum dolor sit amet?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
+  },
+  {
+    title: "4. Lorem ipsum dolor sit amet?",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
   },
@@ -226,37 +241,22 @@ export const FAQ = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
   },
   {
-    title: "Lorem ipsum dolor sit amet?",
+    title: "5. Lorem ipsum dolor sit amet?",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
   },
   {
-    title: "Lorem ipsum dolor sit amet?",
+    title: "6. Lorem ipsum dolor sit amet?",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
   },
   {
-    title: "Lorem ipsum dolor sit amet?",
+    title: "7. Lorem ipsum dolor sit amet?",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
   },
   {
-    title: "Lorem ipsum dolor sit amet?",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet?",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet?",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet?",
+    title: "8. Lorem ipsum dolor sit amet?",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
   },

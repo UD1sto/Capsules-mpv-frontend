@@ -1,12 +1,9 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
 import { Logo } from "../logo/Logo";
-import { Button } from "@mui/material";
+import { Button, Container, Typography, Box, AppBar } from "@mui/material";
 import { MobileMenu } from "../mobile-menu/MobileMenu";
 import Link from "next/link";
+import styles from "./styles.module.css";
 
 const pages = [
   { path: "/dashboard", title: "Dashboard" },
@@ -32,14 +29,10 @@ export function MainMenu() {
   };
 
   return (
-    <AppBar
-      position="absolute"
-      sx={{ background: "transparent", boxShadow: "none" }}
-    >
+    <AppBar position="absolute" className={styles.appBar}>
       <Container maxWidth="xl">
-        <Box
-          sx={{ display: "flex", justifyContent: "space-between", pt: "20px" }}
-        >
+        <Box className={styles.appBox}>
+          
           <Logo />
           <Box sx={{ display: { xs: "flex", lg: "none" } }}>
             <MobileMenu
@@ -57,19 +50,13 @@ export function MainMenu() {
                   key={page.title}
                   onClick={handleCloseNavMenu}
                   variant="subtitle1"
-                  sx={{
-                    my: 2,
-                    px: "20px",
-                    ":hover": {
-                      cursor: "pointer",
-                      textShadow: "#c9c9d394 0px 0px 15px",
-                    },
-                  }}
+                  className={styles.appLink}
                 >
                   {page.title}
                 </Typography>
               </Link>
             ))}
+
             <Button
               variant="contained"
               sx={{ width: "fit-content", ml: "30px" }}

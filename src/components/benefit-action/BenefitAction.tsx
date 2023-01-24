@@ -24,12 +24,14 @@ export function BenefitAction(props: BenefitsActionProps) {
         }}
         className={styles.deskImg}
       />
+
       <Stack sx={{ maxWidth: action.maxContentWidth }}>
         <Typography variant="h2">{action.label}</Typography>
-        <img src={action.image} alt="" className={styles.mobImg}/>
+        <img src={action.image} alt="" className={styles.mobImg} />
         <Typography variant="subtitle1" padding="20px 0 40px">
           {action.description}
         </Typography>
+        
         <Button variant="contained">Learn more</Button>
       </Stack>
     </Stack>

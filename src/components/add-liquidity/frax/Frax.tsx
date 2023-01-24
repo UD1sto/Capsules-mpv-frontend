@@ -1,4 +1,5 @@
-import { Stack, Typography, useMediaQuery } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
+import Image from "next/image";
 
 export function Frax() {
   return (
@@ -42,17 +43,11 @@ export function Frax() {
 }
 
 export const TokenItem = () => {
-  const sm = useMediaQuery("(min-width:500px)");
-
   return (
     <Stack direction="row" spacing={1} sx={{ flexGrow: 1, m: 2, ml: 0 }}>
-      <img
-        src="/images/bnc.png"
-        style={{ width: "30px", height: "30px" }}
-        alt="token"
-      />
+      <Image src="/images/bnc.png" alt="token" width={30} height={30} />
       <Stack>
-        <Typography mb="18px">Ethereum</Typography>
+        <Typography mb={1.12}>Ethereum</Typography>
         <Typography>290,801,74</Typography>
       </Stack>
       <Typography>30.47%</Typography>

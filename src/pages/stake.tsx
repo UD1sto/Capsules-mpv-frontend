@@ -3,12 +3,7 @@ import { Button, Stack, Typography } from "@mui/material";
 
 export default function Stake() {
   return (
-    <Stack
-      justifyContent="center"
-      alignItems="center"
-      minHeight="calc(100vh - 265px)"
-      mt={"70px"}
-    >
+    <Stack justifyContent="center" alignItems="center" mt={"70px"}>
       <Typography variant="h3">Stake to earn</Typography>
       <Typography
         variant="subtitle1"
@@ -19,16 +14,17 @@ export default function Stake() {
       </Typography>
       <Card sx={{ maxWidth: 570, borderRadius: "25px" }}>
         <Input
-          placeholder="Amount"
-          type="number"
-          endBox={
-            <Button
-              sx={{ p: 1, backgroundColor: "#14141491" }}
-              variant="contained"
-            >
-              MAX
-            </Button>
-          }
+          input={{ placeholder: "Amount", type: "number" }}
+          endBox={{
+            box: (
+              <Button
+                sx={{ p: 1, backgroundColor: "#14141491" }}
+                variant="contained"
+              >
+                MAX
+              </Button>
+            ),
+          }}
         />
         <Button variant="contained" sx={{ mt: 2.2 }}>
           Connect wallet
@@ -52,6 +48,7 @@ export default function Stake() {
           </Stack>
         </Stack>
       </Card>
+
       <Card
         sx={{ maxWidth: 570, borderRadius: "25px", mt: 4 }}
         spacing={2}

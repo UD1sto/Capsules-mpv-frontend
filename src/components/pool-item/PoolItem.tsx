@@ -23,7 +23,7 @@ const style = {
   flexDirection: "row",
   flexWrap: { xs: "wrap", md: "no-wrap" },
   zIndex: 200,
-  p:{ sm:"12px 30px!important",xs:"25px 20px!important"},
+  p: { sm: "12px 30px!important", xs: "25px 20px!important" },
   ":hover": {
     backgroundColor: "rgba(60, 60, 60, 0.4)",
     transition: "0.3s",
@@ -58,10 +58,7 @@ export function PoolItem(props: PoolItemProps) {
           <Typography>{balance}</Typography>
         </Stack>
       </Stack>
-      <Stack
-        className={styles.btnBox}
-        spacing={1}
-      >
+      <Stack className={styles.btnBox} spacing={1}>
         <Button variant="contained">Borrow</Button>
         <Button variant="outlined">Replay</Button>
       </Stack>

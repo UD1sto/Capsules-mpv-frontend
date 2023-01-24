@@ -4,6 +4,7 @@ import { BenefitAction, Benefits, ComingSoon, Alert } from "@/components";
 import { useState } from "react";
 import { ACTIONS, BENEFITS } from "@/content";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [opened, setOpened] = useState(true);
@@ -35,7 +36,7 @@ export default function Home() {
                 In collaboration with:
               </Typography>
               <Stack>
-                <img src="/images/saddle-logo.png" alt="" />
+                <Image src="/images/saddle-logo.png" alt="saddle-logo" width={50} height={50}/>
                 <Typography>Saddle</Typography>
               </Stack>
             </Stack>

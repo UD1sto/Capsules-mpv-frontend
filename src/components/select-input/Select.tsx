@@ -44,10 +44,10 @@ interface SelectProps {
 }
 
 export function SelectInput({ options, size }: SelectProps) {
-  const [age, setAge] = React.useState(options[0].value);
+  const [value, setValue] = React.useState(options[0].value);
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string);
+    setValue(event.target.value as string);
   };
 
   return (
@@ -55,7 +55,7 @@ export function SelectInput({ options, size }: SelectProps) {
       <FormControl>
         <Select
           IconComponent={ArrowDownIcon}
-          value={age}
+          value={value}
           onChange={handleChange}
           input={<BootstrapInput />}
           sx={{ borderRadius: "50px" }}
@@ -67,6 +67,7 @@ export function SelectInput({ options, size }: SelectProps) {
               className={styles.menuItemBox}
               key={item.label}
             >
+
               <Stack className={styles.menuItem}>
                 {item.img && <img src={item.img} alt="icon" />}
                 <Typography variant="h3" marginRight="25px" fontSize={{xs:size}}>

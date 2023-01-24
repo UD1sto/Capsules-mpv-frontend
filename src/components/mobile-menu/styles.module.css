@@ -1,0 +1,43 @@
+.paperBox {
+  width: 100%;
+  left: 0 !important;
+  height: 101%;
+  max-width: none;
+  max-height: none;
+  top: 0 !important;
+  background: #141414 !important;
+}
+.paperLight {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: calc(50% - 125px);
+  left: calc(50vw - 125px);
+  opacity: 0.5;
+  filter: blur(175px);
+  border-radius: 50px;
+}
+.logoBox {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 23px 70px;
+}
+.menuItem {
+  padding: 25px 0;
+  border: 1px solid rgba(60, 60, 60, 0.2);
+}
+.menuItem p {
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.btnBox {
+  align-items: center;
+  margin: 30px;
+}
+.btnBox button {
+  width: fit-content;
+}

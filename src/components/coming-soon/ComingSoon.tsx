@@ -8,7 +8,7 @@ export function ComingSoon() {
       sx={{ background: (theme) => theme.palette.primary.main }}
     >
       <img src="/icons/capsula.svg" alt="" />
-      
+
       <Stack className={styles.comingSoonBox}>
         <Typography variant="h2">Coming soon</Typography>
         <Typography className={styles.comingSoonDesc}>

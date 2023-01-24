@@ -1,8 +1,6 @@
 import { MainMenu } from "@/components";
-
 import styles from "@/styles/Layouts.module.css";
-import { Box } from "@mui/material";
-import { Container } from "@mui/system";
+import { Box, Container } from "@mui/material";
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,4 +1,5 @@
 import { Button, Stack, Typography } from "@mui/material";
+import Image from "next/image";
 import styles from "./styles.module.css";
 
 export function AddLiqForm() {
@@ -12,7 +13,7 @@ export function AddLiqForm() {
           className={styles.inputBox}
           key={el}
         >
-          <img src="/images/bnc.png" alt="bnc" />
+          <Image src="/images/bnc.png" alt="bnc" width={30} height={30} />
           <Typography m="0 10px">Ethereum</Typography>
         </Stack>
       ))}

@@ -9,7 +9,7 @@ export default function ContactUs() {
       alignItems="center"
       minHeight="calc(100vh - 265px)"
     >
-      <Typography variant="h2" mb={2.5} mt={sm?10:5} textAlign="center">
+      <Typography variant="h2" mb={2.5} mt={sm ? 10 : 5} textAlign="center">
         Have any questions?
       </Typography>
       <Typography variant="subtitle1" textAlign="center">

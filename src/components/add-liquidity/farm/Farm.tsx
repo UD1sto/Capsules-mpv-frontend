@@ -1,8 +1,8 @@
-import { Button, Stack, Typography, useMediaQuery } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 
 export function Farm() {
-  const sm = useMediaQuery("(min-width:500px)");
+
   return (
     <Stack className={styles.farmBox}>
       <Stack>

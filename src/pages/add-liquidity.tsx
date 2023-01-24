@@ -1,5 +1,4 @@
 import { AddLiqForm, Card, Farm, Frax } from "@/components";
-import { SwapForm } from "@/components";
 import { Stack, useMediaQuery } from "@mui/material";
 
 export default function AddLiquidity() {

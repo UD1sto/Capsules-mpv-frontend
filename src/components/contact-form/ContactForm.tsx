@@ -16,27 +16,27 @@ export function ContactForm() {
     >
       <Stack direction={sm ? "row" : "column"} spacing={sm ? 2 : 4}>
         <Input
-          placeholder="Your name ..."
           icon={<UserIcon />}
           variant="standard"
-          type="text"
+          input={{ placeholder: "Your name ..." }}
         />
         <Input
-          placeholder="Your email ..."
           icon={<EmailIcon />}
           variant="standard"
-          type="email"
+          input={{ placeholder: "Your email ...", type: "email" }}
         />
       </Stack>
 
       <Box>
         <Input
-          placeholder="Your text ..."
           icon={<TextIcon />}
           variant="standard"
-          type="text"
-          multiline
-          fullWidth
+          input={{
+            placeholder: "Your text ...",
+            type: "email",
+            multiline: true,
+            fullWidth: true,
+          }}
         />
       </Box>
       <Stack alignItems={"center"}>
