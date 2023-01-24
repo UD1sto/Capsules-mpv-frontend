@@ -20,3 +20,5 @@ export * from "./swap-form/SwapForm";
 export * from "./contact-form/ContactForm";
 export * from "./input/Input";
 export * from "./supply-form/SupplyForm";
+export * from "./my-positions/TokenCard";
+export * from "./switch/Switch";

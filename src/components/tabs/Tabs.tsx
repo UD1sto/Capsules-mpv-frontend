@@ -8,6 +8,7 @@ interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
+  key: string;
 }
 
 interface Tab {
@@ -22,7 +23,7 @@ function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
 
   return (
-    <div
+    <Box
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -30,7 +31,7 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && <Box sx={{ pt: 3, pb: 5 }}>{children}</Box>}
-    </div>
+    </Box>
   );
 }
 
