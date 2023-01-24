@@ -40,8 +40,6 @@ a {
 body {
   position: relative;
   background-color: #141414;
-  padding-right: 4px!important;
-  overflow-y: scroll!important;
 }
 ::-webkit-scrollbar {
   background-color: #141414;
@@ -50,4 +48,9 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: rgb(156, 156, 156);
   border-radius: 10px;
+}
+::-webkit-inner-spin-button,
+::-webkit-inner-outer-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

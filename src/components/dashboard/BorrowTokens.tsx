@@ -178,7 +178,7 @@ const TableItem = ({
                   alt=""
                   style={{ width: "20px", height: "20px", marginRight: "8px" }}
                 />
-                {row[header.value]}
+                {row[header.value as keyof {}]}
               </Stack>
 
               <Stack direction="row" spacing={2} mt={2.3}>
@@ -229,7 +229,7 @@ const TableItem = ({
             }}
             key={header.label}
           >
-            {row[header.value]}
+            {row[header.value as keyof {}]}
           </TableCell>
         );
       })}
