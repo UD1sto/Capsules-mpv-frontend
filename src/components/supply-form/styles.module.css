@@ -1,0 +1,9 @@
+.iconBox{
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.iconBox img{
+    margin-right: 8px;
+}

@@ -51,6 +51,10 @@ export const UserIcon = (props: IconProps) => (
   <img src="icons/user.svg" {...props} />
 );
 
+export const DoneIcon = (props: IconProps) => (
+  <img src="icons/done.svg" {...props} />
+);
+
 export const CloseSerifIcon = (props: IconProps) => {
   const { variant, ...restProps } = props || {};
   switch (props?.variant) {
