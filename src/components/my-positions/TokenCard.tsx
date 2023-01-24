@@ -15,7 +15,7 @@ export function TokenCard(props: TokenCardProps) {
   const btnTitles = getBtnTitles(type);
 
   return (
-    <Card sx={{ borderRadius: "25px", maxWidth: 570 }}>
+    <Stack>
       <Stack
         direction="row"
         justifyContent="space-between"
@@ -47,7 +47,7 @@ export function TokenCard(props: TokenCardProps) {
           {btnTitles[1]}
         </Button>
       </Stack>
-    </Card>
+    </Stack>
   );
 }
 
