@@ -41,6 +41,9 @@
   position: absolute;
   top: 80px;
 }
-.box2 img{
-    position: absolute;
+.box2 img {
+  position: absolute;
+}
+.box3 {
+  width: 118px;
 }

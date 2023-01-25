@@ -21,27 +21,7 @@ export function Panel() {
 
   return (
     <Box sx={{ width: "100%", maxWidth: 1170, mt: 4 }}>
-      {sm && (
-        <Box>
-          <HeaderPanel hidden fullWidth />
-
-          <Collapse in={!checked}>
-            <Card sx={{ borderRadius: "15px", mt: "20px" }}>
-              <Stack alignItems="center">
-                <EllipseRatio value={34} sx={{ height: 180, width: 180 }} />
-              </Stack>
-              {TOTAL_LABELS.map((label: string) => {
-                return (
-                  <Stack py="20px" borderBottom="1px solid gray">
-                    <Typography variant="subtitle2">{label}</Typography>
-                    <Typography>$0.00</Typography>
-                  </Stack>
-                );
-              })}
-            </Card>
-          </Collapse>
-        </Box>
-      )}
+      {sm && <MobileHiddenPanel checked={checked} />}
       {!sm && (
         <Box>
           {md && (
@@ -50,6 +30,7 @@ export function Panel() {
             </Collapse>
           )}
           {!md && <HeaderPanel />}
+
           <Collapse in={!checked}>
             <Stack
               direction={md ? "row" : "column"}
@@ -57,57 +38,97 @@ export function Panel() {
               mt={!md ? "20px" : 0}
             >
               {md && <HeaderPanel hidden={md} />}
-
-              <Card
-                sx={{ borderRadius: "15px", width: 830 }}
-                spacing={2}
-                direction="row"
-                alignItems="center"
-              >
-                <Stack className={styles.ratioBox}>
-                  <Stack spacing={5} className={styles.box1}>
-                    <TextItem label="Supply Balance" />
-                    <TextItem label="Net Value" />
-                  </Stack>
-
-                  <Stack className={styles.box2}>
-                    <UnionIcon/>
-                    <EllipseRatio
-                      sx={{ position: "absolute", left: "175px", top: "-90px" }}
-                      value={20}
-                    />
-                  </Stack>
-
-                  <Stack spacing={5} width="118px" className={styles.box3}>
-                    <TextItem label="Borrow Balance" />
-                    <TextItem label="Net APR" />
-                  </Stack>
-                </Stack>
-
-                <Stack spacing={5} className={styles.borrowLimit}>
-                  <TextItem label="Borrow Limit" />
-                  <TextItem label=" Liquidation Threshold" />
-                </Stack>
-              </Card>
+              <HiddenPanel />
             </Stack>
           </Collapse>
         </Box>
       )}
-      <Stack onClick={handleChange} className={styles.switch}>
-        <Typography>{checked ? "Show" : "Hide"} panel</Typography>
-        <ArrowDownIcon
-          style={!checked ? { transform: "rotate(180deg)" } : {}}
-        />
-      </Stack>
+
+      <Switcher onClick={handleChange} checked={checked} />
     </Box>
   );
 }
 
-export const TextItem = ({ label }: { label: string }) => {
+const TextItem = ({ label }: { label: string }) => {
   return (
     <Stack>
       <Typography variant="subtitle1">{label}</Typography>
       <Typography sx={{ fontSize: "1.25rem" }}>$0.00</Typography>
     </Stack>
+  );
+};
+
+const Switcher = ({
+  checked,
+  onClick,
+}: {
+  checked: boolean;
+  onClick: () => void;
+}) => {
+  return (
+    <Stack onClick={onClick} className={styles.switch}>
+      <Typography>{checked ? "Show" : "Hide"} panel</Typography>
+      <ArrowDownIcon style={!checked ? { transform: "rotate(180deg)" } : {}} />
+    </Stack>
+  );
+};
+
+const MobileHiddenPanel = ({ checked }: { checked: boolean }) => {
+  return (
+    <Box>
+      <HeaderPanel hidden fullWidth />
+
+      <Collapse in={!checked}>
+        <Card sx={{ borderRadius: "15px", mt: "20px" }}>
+          <Stack alignItems="center">
+            <EllipseRatio value={34} sx={{ height: 180, width: 180 }} />
+          </Stack>
+          {TOTAL_LABELS.map((label: string) => {
+            return (
+              <Stack py="20px" borderBottom="1px solid gray">
+                <Typography variant="subtitle2">{label}</Typography>
+                <Typography>$0.00</Typography>
+              </Stack>
+            );
+          })}
+        </Card>
+      </Collapse>
+    </Box>
+  );
+};
+
+const HiddenPanel = () => {
+  return (
+    <Card
+      sx={{ borderRadius: "15px", width: 830 }}
+      spacing={2}
+      direction="row"
+      alignItems="center"
+    >
+      <Stack className={styles.ratioBox}>
+        <Stack spacing={5} className={styles.box1}>
+          <TextItem label="Supply Balance" />
+          <TextItem label="Net Value" />
+        </Stack>
+
+        <Stack className={styles.box2}>
+          <UnionIcon />
+          <EllipseRatio
+            sx={{ position: "absolute", left: "175px", top: "-90px" }}
+            value={20}
+          />
+        </Stack>
+
+        <Stack spacing={5} className={styles.box3}>
+          <TextItem label="Borrow Balance" />
+          <TextItem label="Net APR" />
+        </Stack>
+      </Stack>
+
+      <Stack spacing={5} className={styles.borrowLimit}>
+        <TextItem label="Borrow Limit" />
+        <TextItem label=" Liquidation Threshold" />
+      </Stack>
+    </Card>
   );
 };
