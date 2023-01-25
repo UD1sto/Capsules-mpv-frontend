@@ -289,7 +289,6 @@ export const SUPLLY_CARDS = [
   },
 ];
 
-
 export const STACK_CARDS = [
   {
     date: "Oct 10 - Dec 15",
@@ -315,4 +314,21 @@ export const STACK_CARDS = [
     value: "3,093,272 USDC",
     values: ["05/12/2022", "03/06/2023", "0.0045 LARIX"],
   },
+];
+
+export const MARKETS_LABELS = [
+  "Total Market Value",
+  "Total Supply",
+  "Total Borrow",
+];
+
+export const MARKETS_VALUES = ["$10,620,603", "$8,620,603", "$21,620,603"];
+
+export const TOTAL_LABELS = [
+  "Borrow Limit",
+  "Supply Balance",
+  "Borrow Balance",
+  "Liquidation Threshold",
+  "Net Value",
+  "Net APR",
 ];

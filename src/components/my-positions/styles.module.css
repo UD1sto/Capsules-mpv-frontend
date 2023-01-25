@@ -1,0 +1,46 @@
+.label {
+  line-height: 24px;
+}
+.value {
+  font-size: 1.5rem;
+}
+.switch {
+  flex-direction: row;
+  justify-content: end;
+  margin: 20px 0 50px;
+  z-index: 400;
+}
+.switch img {
+  margin-left: 10px;
+  width: 10px;
+  color: #c9c9d3;
+}
+.switch p {
+  font-family: "Jura";
+  font-weight: 700;
+}
+.switch:hover {
+  cursor: pointer;
+}
+.borrowLimit {
+  height: fit-content;
+  padding: 20px 0 20px 30px;
+  border-left: 2px solid rgba(60, 60, 60, 0.4);
+}
+.ratioBox {
+  position: relative;
+  width: 530px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.box1 {
+  width: 115px;
+  margin-right: 300px;
+}
+.box2 {
+  position: absolute;
+  top: 80px;
+}
+.box2 img{
+    position: absolute;
+}

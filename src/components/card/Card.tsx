@@ -10,7 +10,7 @@ interface CardProps extends StackProps {
 export function Card(props: CardProps) {
   const { title, children, noContent, ...restProps } = props || {};
   return (
-    <Stack className={styles.cardBox} {...restProps}>
+    <Stack className={`${styles.cardBox} ${props?.className}`} {...restProps}>
       {title && (
         <Typography variant="h3" mb="20px">
           {title}

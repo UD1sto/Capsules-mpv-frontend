@@ -18,6 +18,7 @@
   background: rgba(88, 100, 255, 0.9);
   filter: blur(550px);
   border-radius: 200px;
+  z-index: 0;
 }
 .il1 {
   position: absolute;

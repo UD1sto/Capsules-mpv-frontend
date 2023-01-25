@@ -1,11 +1,12 @@
 import { TabsPanel } from "@/components";
-import { TokenBoard } from "@/components/my-positions";
+import { Panel, TokenBoard } from "@/components/my-positions";
 import { STACK_CARDS, SUPLLY_CARDS } from "@/content";
 import { Stack } from "@mui/material";
 
 export default function MyPositions() {
   return (
     <Stack alignItems="center">
+      <Panel />
       <TabsPanel
         tabs={[
           {

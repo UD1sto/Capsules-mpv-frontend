@@ -3,7 +3,7 @@ import CSS from "csstype";
 interface IconProps {
   style?: CSS.Properties;
   className?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "info";
   onClick?: () => void;
 }
 
@@ -55,6 +55,10 @@ export const DoneIcon = (props: IconProps) => (
   <img src="icons/done.svg" {...props} />
 );
 
+export const UnionIcon = (props: IconProps) => (
+  <img src="icons/union.svg" {...props} />
+);
+
 export const CloseSerifIcon = (props: IconProps) => {
   const { variant, ...restProps } = props || {};
   switch (props?.variant) {
@@ -64,5 +68,19 @@ export const CloseSerifIcon = (props: IconProps) => {
       return <img src="icons/closeSerif.svg" {...restProps} />;
     default:
       return <img src="icons/white-close.svg" {...restProps} />;
+  }
+};
+
+export const EllipseIcon = (props: IconProps) => {
+  const { variant, ...restProps } = props || {};
+  switch (props?.variant) {
+    case "primary":
+      return <img src="icons/blue-pers.svg" {...restProps} />;
+    case "secondary":
+      return <img src="icons/purple-pers.svg" {...restProps} />;
+    case "info":
+      return <img src="icons/yell-pers.svg" {...restProps} />;
+    default:
+      return <img src="icons/orange-pers.svg" {...restProps} />;
   }
 };
