@@ -61,12 +61,12 @@ const BaseSwitch = styled((props: SwitchProps) => (
   },
 }));
 
-export function CapsuleSwitch({ label }: SwitchProps) {
+export function CapsuleSwitch({ label }: { label?: string }) {
   return (
     <FormControlLabel
       value="top"
       control={<BaseSwitch color="primary" />}
-      label={`${label}: `}
+      label={label ? `${label}: ` : ""}
       labelPlacement="start"
     />
   );

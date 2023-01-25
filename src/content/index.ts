@@ -261,3 +261,58 @@ export const FAQ = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Lorem ipsum dolor sit amet, consectetur,",
   },
 ];
+
+export const SUPLLY_CARDS = [
+  {
+    date: "Oct 10 - Dec 15",
+    token: "Ruby1010/1215",
+    value: "1,093,272.08 USDC",
+    values: ["0.3413 SOL", "15.81%", "0.2661 SOL"],
+  },
+  {
+    date: "Oct 16 - Dec 17",
+    token: "Ruby1010/1216",
+    value: "2,093,272.08 USDC",
+    values: ["0.3413 SOL", "15.81%", "0.2661 SOL"],
+  },
+  {
+    date: "Oct 19 - Dec 20",
+    token: "Ruby1010/1217",
+    value: "1,793,272.08 USDC",
+    values: ["0.3413 SOL", "15.81%", "0.2661 SOL"],
+  },
+  {
+    date: "Oct 5 - Dec 15",
+    token: "Ruby1010/1218",
+    value: "3,093,272 USDC",
+    values: ["0.3413 SOL", "15.81%", "0.2661 SOL"],
+  },
+];
+
+
+export const STACK_CARDS = [
+  {
+    date: "Oct 10 - Dec 15",
+    token: "Ruby1010/1215",
+    value: "1,093,272.08 USDC",
+    values: ["05/12/2022", "03/06/2023", "0.0045 LARIX"],
+  },
+  {
+    date: "Oct 16 - Dec 17",
+    token: "Ruby1010/1216",
+    value: "2,093,272.08 USDC",
+    values: ["05/12/2022", "03/06/2023", "0.0045 LARIX"],
+  },
+  {
+    date: "Oct 19 - Dec 20",
+    token: "Ruby1010/1217",
+    value: "1,793,272.08 USDC",
+    values: ["05/12/2022", "03/06/2023", "0.0045 LARIX"],
+  },
+  {
+    date: "Oct 5 - Dec 15",
+    token: "Ruby1010/1218",
+    value: "3,093,272 USDC",
+    values: ["05/12/2022", "03/06/2023", "0.0045 LARIX"],
+  },
+];

@@ -1,14 +1,17 @@
-import { Button, Stack, Switch, Typography } from "@mui/material";
-import { Card } from "../card/Card";
+import { Button, Stack, Typography } from "@mui/material";
 import { CapsuleSwitch } from "../switch/Switch";
 
-export interface TokenCardProps {
-  type: "supply" | "borrow" | "stack";
+export interface TokenCardItem {
   values: Array<string>;
   date: string;
   token: string;
   value?: string;
 }
+
+export interface TokenCardProps extends TokenCardItem {
+  type: "supply" | "borrow" | "stack";
+}
+
 export function TokenCard(props: TokenCardProps) {
   const { type, values, date, token, value } = props || {};
   const titles = getTitles(type);
