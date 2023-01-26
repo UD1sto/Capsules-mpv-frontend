@@ -332,3 +332,26 @@ export const TOTAL_LABELS = [
   "Net Value",
   "Net APR",
 ];
+
+export const STAKE_LABELS = [
+  "You will receive",
+  "Exchange rate",
+  "Transaction cost",
+  "Reward fee",
+];
+
+export const STAKE_VALUES = ["0 stETH", "1 ETH = 1 stETH", "$2.32", "10%"];
+
+export const STAKE_LABELS2 = [
+  "Annual percentage rate",
+  "Total staked with Lido",
+  "Stakers",
+  "stETH market cap",
+];
+
+export const STAKE_VALUES2 = [
+  "5.4%",
+  "4,706,540.856 ETH",
+  "123814",
+  "$5,539,188,020",
+];

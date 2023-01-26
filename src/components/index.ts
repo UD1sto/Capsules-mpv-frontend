@@ -22,3 +22,4 @@ export * from "./input/Input";
 export * from "./supply-form/SupplyForm";
 export * from "./my-positions/TokenCard";
 export * from "./switch/Switch";
+export * from "./stake-from/StakeForm";

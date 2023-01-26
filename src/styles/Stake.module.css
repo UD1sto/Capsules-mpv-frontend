@@ -1,0 +1,10 @@
+.container {
+  margin-top: 70px;
+  justify-content: center;
+  align-items: center;
+}
+.subtitle{
+    margin: 16px 0 40px;
+    max-width: 450px;
+    text-align: center;
+}

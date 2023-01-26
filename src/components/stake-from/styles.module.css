@@ -1,0 +1,8 @@
+.btn {
+  padding: 8px;
+  background-color: #14141491;
+}
+.textBox {
+  flex-direction: row;
+  justify-content: space-between;
+}
