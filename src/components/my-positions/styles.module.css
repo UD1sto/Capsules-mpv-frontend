@@ -6,9 +6,10 @@
 }
 .switch {
   flex-direction: row;
-  justify-content: end;
+  justify-content: center;
   margin: 20px 0 50px;
   z-index: 400;
+  position: relative;
 }
 .switch img {
   margin-left: 10px;

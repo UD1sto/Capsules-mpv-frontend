@@ -7,11 +7,11 @@ import styles from "./styles.module.css";
 
 const pages = [
   { path: "/dashboard", title: "Dashboard" },
-  { path: "/add-liquidity", title: "My positions" },
+  { path: "/my-positions", title: "My positions" },
   { path: "/stake", title: "Pools" },
   { path: "/swap", title: "Swap" },
   { path: "/faq", title: "FAQ" },
-  { path: "/", title: "Help" },
+  { path: "/add-liquidity", title: "Help" },
   { path: "/contact-us", title: "Contact us" },
 ];
 
