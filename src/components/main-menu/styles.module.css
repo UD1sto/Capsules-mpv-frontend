@@ -1,6 +1,6 @@
 .appBar {
-  box-shadow: none;
-  background: transparent;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 .appBox {
   display: flex;
