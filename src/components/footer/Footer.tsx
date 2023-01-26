@@ -1,5 +1,5 @@
 import { Stack, Typography } from "@mui/material";
-import styles from "./styles.module.css";
+import styles from "@/styles/Footer.module.css";
 
 export function Footer() {
   return (
