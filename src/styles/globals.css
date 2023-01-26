@@ -40,10 +40,11 @@ a {
 body {
   position: relative;
   background-color: #141414;
+  overflow-y: scroll !important;
 }
 ::-webkit-scrollbar {
   background-color: #141414;
-  width: 5px;
+  width: 1px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: rgb(156, 156, 156);
