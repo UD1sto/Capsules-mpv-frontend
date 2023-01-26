@@ -1,7 +1,7 @@
 .farmBox {
   justify-content: space-between;
   margin: 15px 0;
-  flex-direction: row;
+  flex-direction: row !important;
 }
 .btnBox {
   flex-direction: column;
@@ -15,12 +15,12 @@
 
 @media (max-width: 500px) {
   .farmBox {
-    flex-direction: column;
+    flex-direction: column !important;
     justify-content: center;
     margin-top: 16px;
   }
   .btnBox {
-    flex-direction: row;
+    flex-direction: row !important;
     margin-top: 1rem;
   }
   .btnBox button:not(:last-child) {

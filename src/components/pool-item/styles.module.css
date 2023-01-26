@@ -25,13 +25,13 @@
   width: 140px;
   height: 40px;
 }
-.descBox h6{
-    margin-bottom: 4px;
+.descBox h6 {
+  margin-bottom: 4px;
 }
 
 @media (max-width: 770px) {
   .btnBox {
-    flex-direction: row;
+    flex-direction: row !important;
     align-items: center;
     margin-top: 20px;
     flex-wrap: wrap;

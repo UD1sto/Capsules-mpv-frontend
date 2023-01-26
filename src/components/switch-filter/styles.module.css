@@ -1,5 +1,5 @@
 .switchBox {
-  flex-direction: row;
+  flex-direction: row !important;
   background-color: rgba(60, 60, 60, 0.2);
   border-radius: 50px;
   margin-bottom: 20px;

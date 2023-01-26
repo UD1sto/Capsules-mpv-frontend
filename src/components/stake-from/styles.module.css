@@ -3,6 +3,6 @@
   background-color: #14141491;
 }
 .textBox {
-  flex-direction: row;
+  flex-direction: row !important;
   justify-content: space-between;
 }

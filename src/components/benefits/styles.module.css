@@ -7,7 +7,7 @@
   z-index: 26;
 }
 .benefitsBox {
-  flex-direction: row;
+  flex-direction: row !important;
   align-items: center;
   justify-content: space-between;
 }
@@ -16,7 +16,7 @@
 }
 
 .benefitsContainer {
-  flex-direction: row;
+  flex-direction: row !important;
   width: 100%;
   max-width: 770px;
   justify-content: space-between;
@@ -47,7 +47,7 @@
     flex-wrap: wrap;
     padding: 60px 0;
   }
-  .benefitsContainer{
+  .benefitsContainer {
     margin-top: 40px;
   }
 }

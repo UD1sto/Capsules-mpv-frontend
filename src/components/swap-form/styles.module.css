@@ -1,5 +1,5 @@
 .inputBox {
-  flex-direction: row;
+  flex-direction: row !important;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
@@ -36,8 +36,8 @@
 .textRestr {
   max-width: 300px;
 }
-.box button{
-    margin: 0 30px;
+.box button {
+  margin: 0 30px;
 }
 @media (max-width: 600px) {
   .textRestr {

@@ -1,11 +1,11 @@
 .container {
-  flex-direction: row;
+  flex-direction: row !important;
   justify-content: space-between;
   padding: 19px 0;
 }
-.box{
+.box {
   position: absolute;
   width: 100%;
   top: 0;
-  z-index: 100
+  z-index: 100;
 }

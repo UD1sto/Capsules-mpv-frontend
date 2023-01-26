@@ -1,10 +1,10 @@
 .inputBox {
   padding: 15px 20px;
-  flex-direction: row;
+  flex-direction: row !important;
   align-items: center;
   border-radius: 25px;
 }
-.inputBox img{
-    width: 30px;
-    height: 30px;
+.inputBox img {
+  width: 30px;
+  height: 30px;
 }

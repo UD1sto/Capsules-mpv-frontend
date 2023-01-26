@@ -1,5 +1,5 @@
 .footerBox {
-  flex-direction: row;
+  flex-direction: row !important;
   justify-content: space-between;
   padding-bottom: 70px;
 }
@@ -8,7 +8,7 @@
 }
 @media (max-width: 500px) {
   .footerBox {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
   }
 }

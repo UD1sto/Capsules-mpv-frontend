@@ -5,7 +5,7 @@
   font-size: 1.5rem;
 }
 .switch {
-  flex-direction: row;
+  flex-direction: row !important;
   justify-content: center;
   margin: 20px 0 50px;
   z-index: 400;
@@ -32,7 +32,7 @@
   position: relative;
   width: 530px;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: row !important;
 }
 .box1 {
   width: 115px;
