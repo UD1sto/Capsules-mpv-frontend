@@ -8,7 +8,7 @@
   padding-top: 20px;
 }
 .appLink {
-  margin: 1rem 0;
+  margin: 1rem 0!important;
   padding: 0 1.2rem;
 }
 .appLink:hover {
