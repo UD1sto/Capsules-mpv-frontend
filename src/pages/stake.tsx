@@ -7,7 +7,7 @@ export default function Stake() {
   return (
     <Stack className={styles.container}>
       <Typography variant="h3">Stake to earn</Typography>
-      <Typography className={styles.subtitle} variant="subtitle1">
+      <Typography className={styles.subtitle} variant="subtitle1" mt={2} mb={5}>
         Stake your tokens to earn rewards, select a lock date option to multiply
         your rewards.
       </Typography>
