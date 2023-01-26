@@ -1,18 +1,18 @@
 import { Button, Stack, Typography } from "@mui/material";
 import { CapsuleSwitch } from "../switch/Switch";
 
-export interface TokenCardItem {
+export interface ITokenCardItem {
   values: Array<string>;
   date: string;
   token: string;
   value?: string;
 }
 
-export interface TokenCardProps extends TokenCardItem {
+export interface ITokenCardProps extends ITokenCardItem {
   type: "supply" | "borrow" | "stack";
 }
 
-export function TokenCard(props: TokenCardProps) {
+export function TokenCard(props: ITokenCardProps) {
   const { type, values, date, token, value } = props || {};
   const titles = getTitles(type);
   const btnTitles = getBtnTitles(type);

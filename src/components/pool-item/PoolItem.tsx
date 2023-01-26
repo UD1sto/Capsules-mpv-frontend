@@ -2,7 +2,7 @@ import { Button, Stack, Typography } from "@mui/material";
 import { Card } from "../card/Card";
 import styles from "./styles.module.css";
 
-export interface PoolItem {
+export interface IPoolItem {
   title: string;
   date: string;
   icon1: string;
@@ -12,8 +12,8 @@ export interface PoolItem {
   balance: string;
 }
 
-export interface PoolItemProps {
-  poolItem: PoolItem;
+export interface IPoolItemProps {
+  poolItem: IPoolItem;
 }
 
 const style = {
@@ -30,7 +30,7 @@ const style = {
   },
 };
 
-export function PoolItem(props: PoolItemProps) {
+export function PoolItem(props: IPoolItemProps) {
   const { title, date, icon1, icon2, tvl, volume, balance } =
     props?.poolItem || {};
 

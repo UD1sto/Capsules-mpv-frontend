@@ -1,13 +1,13 @@
-import { BasicModal, FaqItem, FaqItemProps } from "@/components";
+import { BasicModal, FaqItem, IFaqItemProps } from "@/components";
 import { Grid, Stack, Typography } from "@mui/material";
 import { FAQ as FAQitems } from "@/content";
 import { useState } from "react";
 
 export default function FAQ() {
   const [open, setOpen] = useState<boolean>(false);
-  const [currentItem, setCurrentItem] = useState<null | FaqItemProps>(null);
+  const [currentItem, setCurrentItem] = useState<null | IFaqItemProps>(null);
 
-  const openModal = (item: FaqItemProps) => {
+  const openModal = (item: IFaqItemProps) => {
     setOpen(true);
     setCurrentItem(item);
   };
@@ -23,7 +23,7 @@ export default function FAQ() {
         spacing={4}
         mt={{ xs: "20px", sm: "40px" }}
       >
-        {FAQitems.map((item: FaqItemProps) => (
+        {FAQitems.map((item: IFaqItemProps) => (
           <Grid item xs={1} key={item.title} onClick={() => openModal(item)}>
             <FaqItem {...item} />
           </Grid>

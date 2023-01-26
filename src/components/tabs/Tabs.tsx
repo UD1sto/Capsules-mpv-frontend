@@ -1,25 +1,25 @@
 import * as React from "react";
 import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import ITab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { useMediaQuery } from "@material-ui/core";
 
-interface TabPanelProps {
+interface ITabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
   key: string;
 }
 
-interface Tab {
+interface ITab {
   label: string;
   component: React.ReactNode;
 }
-interface TabsProps {
-  tabs: Array<Tab>;
+interface ITabsProps {
+  tabs: Array<ITab>;
 }
 
-function TabPanel(props: TabPanelProps) {
+function TabPanel(props: ITabPanelProps) {
   const { children, value, index, ...other } = props;
 
   return (
@@ -35,7 +35,7 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-export function TabsPanel({ tabs }: TabsProps) {
+export function TabsPanel({ tabs }: ITabsProps) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -55,7 +55,7 @@ export function TabsPanel({ tabs }: TabsProps) {
           centered={!xs}
         >
           {tabs.map((tab, index) => (
-            <Tab label={tab.label} {...a11yProps(index)} key={tab.label} />
+            <ITab label={tab.label} {...a11yProps(index)} key={tab.label} />
           ))}
         </Tabs>
       </Box>

@@ -1,13 +1,13 @@
 import { Stack, StackProps, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 
-interface CardProps extends StackProps {
+interface ICardProps extends StackProps {
   title?: string;
   children?: React.ReactNode;
   noContent?: string;
 }
 
-export function Card(props: CardProps) {
+export function Card(props: ICardProps) {
   const { title, children, noContent, ...restProps } = props || {};
   return (
     <Stack className={`${styles.cardBox} ${props?.className}`} {...restProps}>

@@ -3,11 +3,11 @@ import { Stack, Typography, useMediaQuery } from "@mui/material";
 import styles from "./styles.module.css";
 import { MARKETS_LABELS, MARKETS_VALUES, TOTAL_LABELS } from "@/content";
 
-interface HeaderPanelProps {
+interface IHeaderPanelProps {
   hidden?: boolean;
   fullWidth?: boolean;
 }
-export function HeaderPanel(props: HeaderPanelProps) {
+export function HeaderPanel(props: IHeaderPanelProps) {
   const { hidden, fullWidth } = props;
   
   return (

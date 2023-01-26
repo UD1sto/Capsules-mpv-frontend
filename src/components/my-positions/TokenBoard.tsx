@@ -1,17 +1,17 @@
 import { Grid } from "@mui/material";
 import { Card } from "../card/Card";
-import { TokenCard, TokenCardItem } from "./TokenCard";
+import { TokenCard, ITokenCardItem } from "./TokenCard";
 
-export interface TokenBoardProps {
-  items: Array<TokenCardItem>;
+export interface ITokenBoardProps {
+  items: Array<ITokenCardItem>;
   type: "borrow" | "supply" | "stack";
 }
-export function TokenBoard(props: TokenBoardProps) {
+export function TokenBoard(props: ITokenBoardProps) {
   const { items, type } = props;
 
   return (
     <Grid container spacing={2} columns={{ xs: 1, sm: 2 }} maxWidth={1170}>
-      {items.map((item: TokenCardItem) => (
+      {items.map((item: ITokenCardItem) => (
         <Grid item xs={1}>
           <Card sx={{ borderRadius: "25px" }}>
             <TokenCard type={type} {...item} />

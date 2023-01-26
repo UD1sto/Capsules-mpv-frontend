@@ -32,18 +32,18 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-interface Option {
+interface IOption {
   label: string;
   value: string;
   img?: string;
 }
 
-interface SelectProps {
-  options: Array<Option>;
+interface ISelectProps {
+  options: Array<IOption>;
   size?: string;
 }
 
-export function SelectInput({ options, size }: SelectProps) {
+export function SelectInput({ options, size }: ISelectProps) {
   const [value, setValue] = React.useState(options[0].value);
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -61,7 +61,7 @@ export function SelectInput({ options, size }: SelectProps) {
           sx={{ borderRadius: "50px" }}
           defaultValue={options[0].value}
         >
-          {options.map((item: Option) => (
+          {options.map((item: IOption) => (
             <MenuItem
               value={item.value}
               className={styles.menuItemBox}

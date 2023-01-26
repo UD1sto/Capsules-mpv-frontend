@@ -4,12 +4,12 @@ import Modal from "@mui/material/Modal";
 import { PrimaryCloseIcon } from "public/icons";
 import styles from "./styles.module.css";
 
-interface BasicModalProps {
+interface IBasicModalProps {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   children: React.ReactNode;
 }
-export function BasicModal(props: BasicModalProps) {
+export function BasicModal(props: IBasicModalProps) {
   const { open, setOpen, children } = props || {};
   const handleClose = () => setOpen(false);
 

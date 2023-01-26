@@ -115,7 +115,7 @@ const HiddenPanel = () => {
           <UnionIcon />
           <EllipseRatio
             sx={{ position: "absolute", left: "175px", top: "-90px" }}
-            value={20}
+            value={25}
           />
         </Stack>
 

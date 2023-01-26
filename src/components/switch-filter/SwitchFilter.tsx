@@ -2,16 +2,16 @@ import { Button, Stack } from "@mui/material";
 import { useRouter } from "next/router";
 import styles from "./styles.module.css";
 
-interface Filter {
+interface IFilter {
   query: string;
   label: string;
 }
 
-interface SwitchFilterProps {
-  filters: Array<Filter>;
+interface ISwitchFilterProps {
+  filters: Array<IFilter>;
 }
 
-export function SwitchFilter(props: SwitchFilterProps) {
+export function SwitchFilter(props: ISwitchFilterProps) {
   const router = useRouter();
 
   const changeFilter = (query: string) => {

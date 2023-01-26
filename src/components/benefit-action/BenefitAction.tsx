@@ -1,7 +1,7 @@
 import { Button, Stack, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 
-interface BenefitsActionProps {
+interface IBenefitsActionProps {
   action: {
     image: string;
     maxWidth: number;
@@ -11,7 +11,7 @@ interface BenefitsActionProps {
   };
   index: number;
 }
-export function BenefitAction(props: BenefitsActionProps) {
+export function BenefitAction(props: IBenefitsActionProps) {
   const { action, index } = props;
 
   return (

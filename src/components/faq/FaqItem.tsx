@@ -2,12 +2,12 @@ import { Typography, useMediaQuery } from "@mui/material";
 import { Card } from "../card/Card";
 import styles from "./styles.module.css";
 
-export interface FaqItemProps {
+export interface IFaqItemProps {
   title: string;
   description: string;
 }
 
-export function FaqItem({ title, description }: FaqItemProps) {
+export function FaqItem({ title, description }: IFaqItemProps) {
   return (
     <Card
       sx={{

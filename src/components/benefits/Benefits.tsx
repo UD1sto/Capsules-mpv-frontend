@@ -1,16 +1,16 @@
 import { Stack, Typography, Container } from "@mui/material";
 import styles from "./styles.module.css";
 
-export interface Benefit {
+export interface IBenefit {
   value?: string;
   label?: string;
 }
 
-export interface BenefitsProps {
-  benefits: Array<Benefit>;
+export interface IBenefitsProps {
+  benefits: Array<IBenefit>;
 }
 
-export function Benefits(props: BenefitsProps) {
+export function Benefits(props: IBenefitsProps) {
   const { benefits } = props || {};
 
   return (
@@ -32,7 +32,7 @@ export function Benefits(props: BenefitsProps) {
   );
 }
 
-const BenefitItem = ({ benefit }: { benefit: Benefit }) => (
+const BenefitItem = ({ benefit }: { benefit: IBenefit }) => (
   <Stack>
     <Typography className={styles.benValue}>{benefit.value}</Typography>
     <Typography variant="subtitle1">{benefit.label}</Typography>

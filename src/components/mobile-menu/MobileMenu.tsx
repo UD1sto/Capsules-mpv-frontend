@@ -13,7 +13,7 @@ import { CloseIcon, MenuIcon } from "public/icons";
 import Link from "next/link";
 import styles from "./styles.module.css";
 
-interface MobileMenuProps {
+interface IMobileMenuProps {
   handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void;
   anchorElNav: null | HTMLElement;
   handleCloseNavMenu: () => void;
@@ -25,7 +25,7 @@ export function MobileMenu({
   anchorElNav,
   handleCloseNavMenu,
   pages,
-}: MobileMenuProps) {
+}: IMobileMenuProps) {
   return (
     <Box>
       <IconButton

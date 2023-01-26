@@ -1,4 +1,4 @@
-import { BasicTable, Card, Header, SelectInput } from "@/components";
+import { BasicTable, Card, IHeader, SelectInput } from "@/components";
 import {
   BORROW_HEADERS,
   SELECT_ITEMS,
@@ -148,7 +148,7 @@ const TableItem = ({
   supply,
 }: {
   row: object;
-  headers: Array<Header>;
+  headers: Array<IHeader>;
   supply?: boolean;
 }) => {
   const md = useMediaQuery("(min-width:1200px)");

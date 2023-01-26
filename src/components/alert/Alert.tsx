@@ -9,7 +9,7 @@ import { CloseIcon } from "public/icons";
 import React from "react";
 import styles from "./styles.module.css";
 
-interface AlertProps {
+interface IAlertProps {
   opened: boolean;
   title?: string;
   actionTitle?: string;
@@ -17,7 +17,7 @@ interface AlertProps {
   setOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export function Alert(props: AlertProps) {
+export function Alert(props: IAlertProps) {
   const md = useMediaQuery("(min-width:800px)");
   const { title, actionTitle, handleAction, opened, setOpened, ...rest } =
     props || {};

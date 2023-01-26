@@ -6,17 +6,17 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
-export interface Header {
+export interface IHeader {
   label: string;
   value: string;
 }
 
-interface BasicTableProps {
-  headers: Array<Header>;
+interface IBasicTableProps {
+  headers: Array<IHeader>;
   children: React.ReactNode;
 }
 
-export function BasicTable({ headers, children }: BasicTableProps) {
+export function BasicTable({ headers, children }: IBasicTableProps) {
   return (
     <TableContainer>
       <Table aria-label="table">
