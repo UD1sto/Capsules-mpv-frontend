@@ -2,8 +2,8 @@
   width: 100%;
   left: 0 !important;
   height: 101%;
-  max-width: none;
-  max-height: none;
+  max-width: none !important;
+  max-height: none !important;
   top: 0 !important;
   background: #141414 !important;
 }
