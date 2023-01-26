@@ -1,7 +1,7 @@
 import { Card } from "../card/Card";
-import { Stack, Typography, useMediaQuery } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import styles from "./styles.module.css";
-import { MARKETS_LABELS, MARKETS_VALUES, TOTAL_LABELS } from "@/content";
+import { MARKETS_LABELS, MARKETS_VALUES } from "@/content";
 
 interface IHeaderPanelProps {
   hidden?: boolean;
@@ -25,6 +25,7 @@ export function HeaderPanel(props: IHeaderPanelProps) {
           spacing={1}
           direction={hidden ? "column" : "row"}
           alignItems={!hidden ? "center" : ""}
+          key={label}
         >
           <Typography variant="subtitle1" className={styles.label}>
             {label}

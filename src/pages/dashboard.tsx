@@ -8,7 +8,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (!router.query.filter) router.push('?filter=all');
-  }, []);
+  }, [router]);
 
   return (
     <>

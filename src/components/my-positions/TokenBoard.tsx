@@ -12,7 +12,7 @@ export function TokenBoard(props: ITokenBoardProps) {
   return (
     <Grid container spacing={2} columns={{ xs: 1, sm: 2 }} maxWidth={1170}>
       {items.map((item: ITokenCardItem) => (
-        <Grid item xs={1}>
+        <Grid item xs={1} key={item.token}>
           <Card sx={{ borderRadius: "25px" }}>
             <TokenCard type={type} {...item} />
           </Card>

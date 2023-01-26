@@ -85,7 +85,7 @@ const MobileHiddenPanel = ({ checked }: { checked: boolean }) => {
           </Stack>
           {TOTAL_LABELS.map((label: string) => {
             return (
-              <Stack py="20px" borderBottom="1px solid gray">
+              <Stack py="20px" borderBottom="1px solid gray" key={label}>
                 <Typography variant="subtitle2">{label}</Typography>
                 <Typography>$0.00</Typography>
               </Stack>

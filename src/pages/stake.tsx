@@ -19,7 +19,9 @@ export default function Stake() {
         title="Lido statistics"
       >
         {STAKE_LABELS2.map((label: string, i: number) => {
-          return <TextItem label={label} value={STAKE_VALUES2[i]} />;
+          return (
+            <TextItem label={label} value={STAKE_VALUES2[i]} key={label} />
+          );
         })}
       </Card>
     </Stack>

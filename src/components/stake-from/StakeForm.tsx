@@ -19,7 +19,7 @@ export function StakeForm() {
 
       <Stack spacing={2} mt={6}>
         {STAKE_LABELS.map((label: string, i: number) => {
-          return <TextItem label={label} value={STAKE_VALUES[i]} />;
+          return <TextItem label={label} value={STAKE_VALUES[i]} key={label} />;
         })}
       </Stack>
     </Card>

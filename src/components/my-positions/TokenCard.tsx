@@ -34,7 +34,7 @@ export function TokenCard(props: ITokenCardProps) {
       <Stack spacing={2} my={4}>
         {titles.map((title, i) => {
           return (
-            <Stack direction="row" justifyContent="space-between">
+            <Stack direction="row" justifyContent="space-between" key={title}>
               <Typography variant="subtitle1">{title}</Typography>
               <Typography variant="subtitle1">{values?.[i]}</Typography>
             </Stack>

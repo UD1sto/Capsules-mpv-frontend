@@ -1,4 +1,3 @@
-import { StandardTextFieldProps } from "@material-ui/core";
 import {
   InputAdornment,
   Stack,
@@ -17,7 +16,7 @@ export interface InputProps {
 }
 
 export function Input(props: InputProps) {
-  const { icon, variant, endBox, label, input, subtitle } = props || {};
+  const { icon, variant, endBox, label, input } = props || {};
 
   switch (variant) {
     case "standard":
